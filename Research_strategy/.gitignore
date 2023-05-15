@@ -1,0 +1,10 @@
+*.pdf
+*.aux
+*.bbl
+*.blg
+*.gz
+*.log
+*.DS_Store
+
+/Figures
+
