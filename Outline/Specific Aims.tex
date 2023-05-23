@@ -3,25 +3,22 @@
 % Allows use of system fonts rather than just LaTeX's ones
 % NOTE - if you use TeXShop and Bibdesk (Mac), can complete citations
 %  - open your .bib file, type \citep{xx... and then F5 or Option-Escape
-\documentclass[11pt]{article} % 12pt with Minion Pro
+\documentclass[11pt]{article} 
 % for NIH - print this PDF at 104% to be sure it's no more than 15 characters
-%  per inch and no less than 6 lines per inch (with Minion Pro 12pt)
+%  per inch and no less than 6 lines per inch 
 \usepackage{geometry} % set page layout
 % this gives reasonable margins for NIH forms after the 104% print
-\geometry{left=0.6in,right=0.6in, top=0.75in, bottom=0.75in, letterpaper}  
+\geometry{left=0.55in, right=0.55in, top=0.6in, bottom=0.6in, letterpaper}  
 \usepackage[xetex]{graphicx} % allows us to manipulate graphics.
 % Replace option [] with pdftex if you don't use Xe(La)TeX
 \usepackage{color}
-%\usepackage{hyperref}
-\usepackage{epstopdf} % automatic conversion of eps to pdf 
 \usepackage{amsmath, amssymb} % Better maths support & more symbols
 \usepackage{enumitem}[shortlabels] % control over indentation for enumerate etc.
 \usepackage{textcomp} % provide lots of new symbols - see textcomp.pdf
-%\usepackage{enumerate}% http://ctan.org/pkg/enumerate
 % line spacing: \doublespacing, \onehalfspacing, \singlespacing
 \usepackage{setspace}
 \singlespacing
-\setstretch{0.95} % shrink line spacing a little bit
+\setstretch{0.95} % increase line spacing a little bit
 % allows text flowing around figs
 % use \begin{wrapfigure}{x}{width} where x = r(ight) or l(eft)
 \usepackage{wrapfig}
@@ -62,6 +59,7 @@
 %\setmainfont[BoldFont={Minion Pro Bold.otf}, ItalicFont={Minion Pro Italic.otf}]{Minion Pro Reg.otf} %%% for overleaf
 \setmainfont{Helvetica}
 %\setmainfont{Palatino}
+%\setmainfont{Minion Pro}
 
 %:CITATION STYLE
 % natbib package: square,curly, angle(brackets)
@@ -111,65 +109,59 @@
 \begin{document}
 \pagestyle{empty}
 \subsection*{Specific Aims:}
+\vspace{-2mm}
+Splenic marginal zone (MZ) B cells, strategically positioned as gatekeepers between the circulation and the immune system, play a vital role in building an efficient and protective responses against blood-borne pathogens. 
+Clinically, their loss or functional impairment is associated with decreased IgM titers, increased risk of sepsis and mortality from encapsulated bacterial infections, autoimmune pathologies, and diminished vaccination responses.
+Aside from symptom management, there are currently very few therapies available to treat MZ B cell depletion and dysfunction.
+Despite their importance, many aspects of MZ B cell ontogeny, homeostasis, and clonal regulation remain obscure.
+Any defect in these processes due to aging or immunogenic perturbations, such as infections or malignancies, may lead to severe dysregulation in MZ B cell compartment.
+Understanding and quantifying variation in the processes regulating MZ B cell homeostasis is therefore crucial for identifying new treatments and developing efficient vaccination strategies.
+%In this proposal, we define \textbf{an integrative approach to quantitatively map the developmental trajectories of marginal zone B cells and to dissect the mechanisms that maintain their numbers and clonal diversity, throughout life.}
 
-Marginal Zone (MZ) B cell deficiency is clinically linked to reduced IgM titers and heightened susceptibility to sepsis and mortality related to encapsulated bacterial infections; and impairment in their function and localization correlates with autoimmune pathologies.
-%In addition, impairment in their function and localization is associated with several autoimmune pathologies.
-Despite their importance, many aspects of the ontogeny,  homeostasis, and clonal regulation of MZ B cells remain obscure.
-%Identifying the determinants of B cell fate is crucial for resolving the etiology of B cell related deficiencies and malignancies and, in the context of MZ B cells, boosting immunity against systemic infections. 
-The \textit{\underline{central aim}} of this proposal is to quantitatively map the developmental trajectories of marginal zone B cells and to dissect the mechanisms that maintain their numbers and clonal diversity, throughout life.
-
-
-Strategically positioned as the gatekeepers between the circulation and the immune system, splenic MZ B cells form a frontline of defense against blood-borne pathogens.  
-MZ B cells mediate early protective responses against diverse T-independent and T-dependent antigens, by employing strategies that blur the boundary between innate and adaptive immunity.
-The establishment and maintenance of MZ B cells in their splenic niche are determined by a complex set of rules that regulate cell division, the influx of new bone marrow (BM) derived cells, death, and onward differentiation. 
-We hypothesize that the rules governing MZ B cell dynamics evolve as we age and are modulated substantially during immunogenic encounters, resulting in significant perturbations in their niche size and clonal composition.
+The establishment and maintenance of MZ B cells in their splenic niche are determined by a complex set of rules that regulate cell division, the influx of new bone marrow (BM) derived cells, death, and differentiation. 
+\textbf{We hypothesize that the rules governing MZ B cell dynamics evolve as we age and are modulated substantially during immunogenic encounters, resulting in significant perturbations in their niche size and clonal composition.}
 Mathematical models, when tightly coupled with experiments, are a natural tool for resolving the dynamics of such complex systems.
-%Lymphocyte repertoires are highly diverse and dynamic structures, and mathematical models are a natural language for describing how they emerge and evolve with age.
-%As a proof of principle, for example, we recently demonstrated age-dependent and tissue-specific variations in long-term maintenance of mature  follicular (FO) and germinal center B cells.
-Here we propose a unique, integrative approach that synthesizes bespoke mathematical and dedicated experimental strategies to develop a mechanistic understanding of MZ B cell ontogeny and maintenance, across the lifespan. 
-%\textbf{Our specific aims are the following:}
+Indeed, we have defined and quantified the dynamics of multiple lymphocyte subsets using approaches that integrated data from unique fate-mapping and carbon-dating strategies with suitably designed models, in both mice and humans.
+Here, we propose to combine custom-built mathematical models and experimental strategies to quantitatively map the developmental trajectories of MZ B cells and to dissect the mechanisms that maintain their numbers and clonal diversity, throughout life.
 
-\textbf{Aim 1: Quantify the steady-state dynamics of MZ B cells -- modeling the kinetics of their renewal and replacement throughout life.} 
-%Mechanisms regulating MZ B cell homeostasis broadly fall into three categories, (i) host age-dependent variation, (ii) quorum-sensing, (iv) innate heterogeneity in cells’ ability to persist within the population. 
-The mechanisms regulating MZ B cell numbers are unknown, and their lineage relationships to other B cell subsets are unclear. In this Aim, we will combine mathematical models and an experimental fate-mapping system to quantify MZ B cell dynamics in healthy mice.
-%Inthis aim, we will develop a mathematical modeling strategy to distinguish these mechanisms and to quantify the processes regulating MZ B cell homeostasis.
-%To distinguish between these mechanisms, we will develop a comprehensive mathematical modeling strategy that quantifies the constitutive replenishment and turnover of MZ B cells.
-We will use a BM chimera system to reveal the developmental progression and kinetics of infiltration of new (donor-derived) cells into the intact peripheral B cell compartments of congenic recipient mice, while measuring self-renewal using Ki67 expression. Using a  Bayesian inference framework, we will then fit  an array of  models to these data to identify the immediate precursor(s) of MZ B cells, and to quantify their division and turnover in detail; identifying any quorum sensing (density-dependent division or loss), kinetic heterogeneity,  or variation in their dynamics with either host or cell age. The latter will reveal the rules of replacement within the MZ B cell compartment.
-%
-% , and test models of turnover.  we will quantify ssess the support for models of quorum-sensing, age-related variation, and any heterogeneity in MZ B cell dynamics
-%
-% The  will allow us to identify 
-%
-% due 
-%
-%(i) age-related variation due to changes in tissue environment  (ii) quorum-sensing -- competition due to limiting resources, and (iii) innate heterogeneity in cells’ ability to persist within the population. 
-%
-%Models and data derived from these experiments will be integrated into a to validate and select mechanisms governing MZ B cell homeostasis and to identify the rules that shape their numbers and clonal diversity throughout life.
-% 
- %Conceptually, the dynamics underlying in MZ B cell homeostasis may involve (i) host age-associated changes in the tissue environment, (ii) quorum-sensing, (iii) innate variation in cellular fitness, and (iv) heterogeneity in cells’ ability to persist with respect to their age (residence-time). 
-%In this aim, we will develop a detailed quantitative understanding of the processes regulating MZ B cell production -- cell division and flow of cells from their precursors, and their overall loss -- death and onwards differentiation. 
-
-
-\textbf{Aim 2: Dissect the mechanisms underlying the establishment of the MZ B cell niche in neonates.} 
-%Early life marks a crucial period for immune development, during which newly formed lymphocytes enter and adapt within rapidly expanding lymphoid niches. 
-The processes that establish and regulate lymphocyte populations have been shown to change progressively with age. % to regulate their numbers and preserve clonal diversity.
-Specifically, we have recently found evidence for distinct dynamics of FO B cells in neonates and adults and hypothesize that similar mechanisms are at play in the MZ B cell pool.
-We will test this using a novel reporter mouse strain that allows us to track changes in pool size, the extent of proliferation, and the frequency of recent BM emigrants among MZ B cells.
-We will extend the models employed in Aim 1 to identify the rules governing the establishment of the MZ B cell niche in early life, and formulate them as PDE systems to quantify variation in cells' ability to persist as a function of their residence time.
+\textbf{Aim 1: Dissect the mechanisms underlying the establishment of the MZ B cell niche in neonates.} 
+First few years of life mark a critical phase of immune development, in which T and B cells establish and dynamically expand their lymphatic niches.
+For many lymphocyte populations, these dynamics play a decisive role in shaping their compartmental sizes and sub-structure at steady-states and their antigen-receptor repertoire diversity.
+However, a precise understanding of MZ B cell dynamics in early life is currently lacking.
+We hypothesize that distinct mechanisms regulate MZ B cell dynamics in neonates and adults and will test this using a powerful combination of age-structured probabilistic models and experiments performed in a novel Rag2-Ki67 dual reporter mouse strain. %, to track MZ B cell dynamics from mouse-birth.
+Further, we define a system of PDE to track simultaneously cell divisions and internal states of developing B cells -- to understand how their maturational and division history influence fate-decisions.
 % how the cells' ability to persist varies as a function of time since their compartmental entry.
 
+
+\textbf{Aim 2: Quantify the steady-state dynamics of MZ B cells -- modeling the kinetics of their renewal and replacement throughout life.} 
+%Conceptually, mechanisms regulating MZ B cell homeostasis may involve (i) age-related changes (ii) quorum-sensing, and (iii) selection operating on natural variation in their ability to persist within the population.
+MZ B cell dynamics have been shown to vary with age and in settings where B cells are depleted or are in excess.
+We postulate that MZ B cells continuously integrate cues from their environment, potentially involving quorum-sensing for B cell receptor (BCR) and Notch2 mediated signaling, to dynamically modulate their homeostatic fitness.
+Alternatively, mechanisms of their maintenance may involve selection operating on cellular variation in the ability to self-renew or survive.
+We will explore these hypotheses using a Bayesian inference framework that validates and compares a diverse array of mechanistic models using data-derived from a well-validated BM chimera system.
+In addition, we will use BCR transgenic and Notch2 mutant mice to define the roles of these signals in regulating MZ B cell ontogeny and maintenance.
+%We will use this framework to identify the immediate precursor(s) of MZ B cells and to build a quantitative map of their division and turnover, across the lifespan.
+
 \textbf{Aim 3: Define and model MZ B cell fate-determination during immune responses.} 
-%Current dogma describes a binary cell-fate decision in B cell developmental stages that leads to terminal commitment into either follicular or MZ B cell lineages. Recent reports advocate for plasticity in B cell differentiation and interchangeability in cellular fates, which challenge the canonical precursor-progeny relationships in B cell lineage. We hypothesize that B cells continuously fine- tune their differentiation potential by integrating instructive cues from their environment, potentially involving quorum-sensing for B cell receptor (BCR) and Notch2 dependent signaling. We will test this by tracking adoptively transferred B cells from different maturational stages in congenic recipients that have varying Notch2 ligands availability.
-Immune activation triggers dramatic changes in the lymphatic environment.
-How and to what extent activation-related cross-talk modulates cell-fate decisions and the response kinetics of mature B cells, is poorly understood.
-We hypothesize that the interplay of B cell receptor and Notch2 mediated signals skews B cell differentiation towards the generation of antigen-specific MZ B cells upon immune activation.
-We will use a dynamical modeling strategy to map B cell differentiation pathways during immune responses, using novel mouse strains expressing an antigen-inducible reporter gene and B cell-specific mutations in  Notch2.  %induced by T-dependent antigenic challenge. 
-We will extend our analysis to infer phylogenetic trees of antigen-specific clones as they diversify during a response, by building a computational pipeline to study single-cell immune repertoire and transcriptomic profiles of activated B cells. % responding to antigenic stimuli.
+%Immune activation triggers dramatic changes in the lymphatic environment.
+How and to what extent activation-related signaling cross-talk modulates fate decisions and immune response kinetics of mature B cells, is poorly understood.
+Recent data from us and others have revealed a non-canonical pathway of MZ B cell generation, during immune responses.
+This suggests that antigenic activation may prime responding B cells towards MZ development, potentially depending on BCR signaling strength.
+%We hypothesize that antigenic activation potentially primes some B cells towards the MZ B fate depending on the strength of BCR signaling.
+In contrast, differentiation to MZ B may be a stochastic process unconnected to BCR specificity. 
+Resolving these hypotheses requires a thorough analysis of BCR repertoire dynamics during immune responses. % can resolve this issue.
+We will use a novel activation-reporter mouse strain to model immune response dynamics of antigen-specific B cells and to infer their differentiation trajectories from their single-cell BCR and RNA sequencing profiles using a phylogeny-based approach.
+% of We will use single-cell BCR and RNA sequencing profiles of antigen-specific B cell clones to infer their differentiation trajectories during immune responses, using a phylogeny-based approach. 
+
+%Here, we will use dynamical modeling of activated B cells and phylogenetic mapping of single-cell BCR and RNA sequencing profiles of antigen-specific clones derived from activation reporter mouse model, to infer their trajectories as they diversify during immune responses.
+%using novel mouse strains expressing an antigen-inducible reporter gene
 %We will further map clonal evolution in B cell subsets after sequential immunizations to pinpoint processes that shape their immune repertoire diversity. % in B cell subsets.
 %We will further map patterns of differentiation in antigen-specific B cell clones after sequential immunizations, to pinpoint processes that shape their immune repertoire diversity. % in B cell subsets.
 
+The results of this study could lead to the discovery of therapeutic targets for the restoration of MZ B cell numbers in splenectomized patients, infants, and the elderly, who are vulnerable to blood-borne pathogens.
+This study may also support the development of interventions against MZ B cell linked autoimmune pathologies and highlight the B cell stages that are most permissive to malignant transformations.
 
-%The \textit{\underline{expected outcome}} of this work is a quantitative understanding of the development and maintenance of MZ B cells across the lifespan.
-The \textit{\underline{positive impact}} of the study proposed here would be the discovery of therapeutic targets for the restoration of MZ B cell numbers in splenectomized patients, infants, and the elderly, who are vulnerable to blood-borne pathogens. 
-This study may also support the development of interventions against MZ B cell linked autoimmune pathologies, and highlight the B cell stages that are most permissive to malignant transformations.
+%The \textit{\underline{positive impact}} of the study proposed here would be the discovery of therapeutic targets for the restoration of MZ B cell numbers in splenectomized patients, infants, and the elderly, who are vulnerable to blood-borne pathogens. 
+%This study may also support the development of interventions against MZ B cell linked autoimmune pathologies, and highlight the B cell stages that are most permissive to malignant transformations.
+
 \end{document}

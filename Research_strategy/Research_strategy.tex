@@ -8,7 +8,7 @@
 %  per inch and no less than 6 lines per inch 
 \usepackage{geometry} % set page layout
 % this gives reasonable margins for NIH forms after the 104% print
-\geometry{left=0.55in, right=0.55in, top=0.69in, bottom=0.69in, letterpaper}  
+\geometry{left=0.55in, right=0.55in, top=0.65in, bottom=0.65in, letterpaper}  
 \usepackage[xetex]{graphicx} % allows us to manipulate graphics.
 % Replace option [] with pdftex if you don't use Xe(La)TeX
 \usepackage{color}
@@ -18,7 +18,7 @@
 % line spacing: \doublespacing, \onehalfspacing, \singlespacing
 \usepackage{setspace}
 \singlespacing
-\setstretch{0.98} % increase line spacing a little bit
+\setstretch{0.95} % increase line spacing a little bit
 % allows text flowing around figs
 \usepackage{wrapfig}
 \usepackage{relsize}
@@ -34,6 +34,7 @@
 
 % linenumbers in L margin, start & end with \linenumbers \nolinenumbers,
 \usepackage{lineno} % use option [modulo] for steps of 5
+%\linenumbers
 \usepackage[auth-sc]{authblk} % authors & institutions - see authblk.pdf
 \renewcommand\Authands{ and } % separates the last 2 authors in the list
 % control how captions look; here, use small font and indent both margins by 20pt
@@ -119,11 +120,11 @@
 Efficient resolution of systemic infections relies on the rapid production and release of antibodies. 
 A key element of this protection is mediated by B cells that reside primarily in the marginal zone (MZ) of the spleen -- an anatomical barrier that divides  lymphocyte-rich follicles and the erythrocyte-rich red pulp. 
 MZ B cells continuously survey the  circulation through the spleen and mount robust responses against blood-borne pathogens~\cite{Kumararatne_1981, Kraal_1992, Schmidt_1993, Martin_2001, Zandvoort_2002}. 
-Their unique programming and constitutive pre-activated state~\cite{Oliver_1997, Martin_2001, Martin_2002, Cerutti_2013}, coupled with their rapid `particulate-antigen' sensing abilities  -- deriving from high expression of Toll-like~\cite{Rubtsov_2008, Bialecki_2009} and complement receptors~\cite{Gray_1984, Dempsey_1996} -- enable MZ B cells to rapidly initiate protective antibody responses to T-independent antigens~\cite{Guinamard_2000, Martin_2001, Martin_Kearney_2000, Balazs_2002, Won_2002, Zandvoort_2002}.
-%In humans deficiency of MZ B cells in splenectomized individuals, and their low numbers in elderly and during infancy, presents with an increased risk of multiple bacterial infections, believed to be due primarily to loss of MZ B cell derived antibodies against capsular polysaccharides~\cite{Kruetzmann_2003, Castagnola_2003, Amlot_1985}.
-Indeed, splenectomized patients, infants, and elderly are at increased risk of multiple bacterial infections, believed to be due primarily to the reduction in MZ B cell-derived antibodies to capsular polysaccharides~\cite{Amlot_1985, Brigden_1999, Guinamard_2000,  Castagnola_2003, Kruetzmann_2003, Kruschinski_2004, Sagaert_2007}.
-In addition to this frontline role, MZ B cells can  efficiently process and present captured antigens and thereby drive T cell-dependent immune responses~\cite{Oliver_1999, Attanavanich_2004,  Cinamon_2007}. 
-They are also capable of exhibiting a more classical B cell phenotype and differentiate into antibody-secreting cells and form germinal centers that lead to somatically mutated and class-switched memory cells~\cite{Tierens_1999, Song_2003, Hendricks_2011, Chappell_2012, Hendricks_2018}. %\red{do they undergo hypermutation?}. 
+Their unique programming and constitutive pre-activated state~\cite{Oliver_1997, Martin_2002, Cerutti_2013}, coupled with their rapid `particulate-antigen' sensing abilities  -- deriving from high expression of Toll-like~\cite{Rubtsov_2008, Bialecki_2009} and complement receptors~\cite{Gray_1984, Dempsey_1996} -- enable MZ B cells to rapidly initiate protective antibody responses to T-independent antigens~\cite{Guinamard_2000, Martin_2001, Martin_Kearney_2000, Balazs_2002, Won_2002, Zandvoort_2002}.
+Indeed, their deficiency seen in immunocompromised and  splenectomized patients and during infancy and old age, is associated with increased risk of bacterial infections, attributed primarily to the diminished MZ B cell-derived antibodies to capsular polysaccharides~\cite{Amlot_1985, Brigden_1999, Guinamard_2000,  Castagnola_2003, Kruetzmann_2003, Kruschinski_2004, Sagaert_2007, Carsetti_2005, Weller_2012}.
+%Indeed, splenectomized patients, immunocompromised individuals, infants, and elderly are at increased risk of multiple bacterial infections, believed to be due primarily to the reduction in MZ B cell-derived antibodies to capsular polysaccharides~\cite{Amlot_1985, Brigden_1999, Guinamard_2000,  Castagnola_2003, Kruetzmann_2003, Kruschinski_2004, Sagaert_2007}.
+In addition to this frontline role, MZ B cells can process, transport and present captured antigens to induce T cell-dependent antibody responses~\cite{Oliver_1999, Attanavanich_2004,  Cinamon_2007, Song_2003, Chappell_2012}. % and are capable of forming germinal centers to generate ~\cite{Oliver_1999, Attanavanich_2004,  Cinamon_2007, Song_2003, Chappell_2012}. 
+%They are also capable of exhibiting a more classical B cell phenotype and differentiate into antibody-secreting cells and form germinal centers that lead to somatically mutated and class-switched memory cells~\cite{Tierens_1999, Song_2003, Hendricks_2011, Chappell_2012, Hendricks_2018}. %\red{do they undergo hypermutation?}. 
 Thus, MZ B cells represent a crossover between innate and adaptive immunity, spearheading early antibody responses against  systemic pathogens, including blood-borne viruses~\cite{Szomolanyi_Tsuda_1998, Gatto_2004}, as well as augmenting slower high-affinity antibody responses that are also derived from mature follicular (FO) B cells~\cite{Oliver_1999, Attanavanich_2004, Pone_2012}.
 However, despite their central role in mediating immunity to pathogens in circulation, multiple aspects of MZ B cell biology -- \textbf{{their development, maintenance, longevity, population structure, and their dynamics during immune responses -- remain very poorly characterized.}}
 
@@ -134,30 +135,42 @@ The overarching goal of the study proposed here is  \textbf{{to synthesize mathe
 
 \begin{wrapfigure}{r}{0.3\textwidth}
 \centering
-\vspace*{-4mm}
-\includegraphics[width=0.3\textwidth]{Figures/bcell_matu.jpg}
-\caption{\textbf{Developmental transitions within B cell subsets.}} %\textbf{(A)} Linear pathway from T1 to FO or MZ. }
+\vspace*{-5mm}
+\includegraphics[width=0.3\textwidth]{Figures/bcell_matu2.jpg}
+\vspace*{-8mm}
+\caption{\textbf{Developmental transitions within B cell subsets in the spleen.}} %\textbf{(A)} Linear pathway from T1 to FO or MZ. }
 \label{fig:MZ_dev}
-\vspace*{-4mm}
+\vspace*{-5mm}
 \end{wrapfigure}
 
-\para{Shifting paradigms of MZ B cell development.}
+\para{Canonical understanding of fate-decisions in the B cell lineage.}
 Identifying the determinants of B cell fate is crucial for resolving the etiology of B cell related deficiencies and malignancies and, in the context of MZ B cells,  boosting immunity against systemic infections. 
-The consensus view of B cell maturation is a linear developmental program from bone marrow precursors, culminating in a bifurcation in which fully mature FO or MZ B cells emerge from late-stage transitional (T2) B cells in the spleen~\cite{Allman_1993, Rolink_1998,  Loder_1999,  Allman_2001, Su_2002,  Pillai_2005, Verma_2007, Allman_2008}~(\textbf{Fig.~\ref{fig:MZ_dev}}). 
-The developmental cues that dictate this decision are not completely defined, but it has been proposed that T2 B cells receiving strong self-antigen derived B cell receptor (BCR) signals tend to differentiate into FO B cells, while those receiving weaker BCR signals tend to develop into MZ B cells~\cite{Cariappa_2001, Seo_2001, Samardzic_2002,  Pillai_2005}.
-%Studies of B cell lineage relationships have identified CD21\hi CD23$^{+}$ T2 B cells as an exclusive MZ precursor (MZP) subset~\cite{Cariappa_2001, Srivastava_2005}. 
-However, recent reports indicate substantial plasticity in these differentiation pathways and show that both fully mature FO B cells~\cite{Lechner_2021}  and very early stage transitional (T1) B cells~\cite{ Tan_2009, Roundy_2010, Hampel_2011} can develop into MZ B cells~(\textbf{Fig.~\ref{fig:MZ_dev}}). Furthermore, other studies have found that MZ B cells are enriched for auto-reactive and high affinity BCR clones~\cite{Martin_2001, Yang_Shih_2002, Zikherman_2012, Tsiantoulas_2017}. 
-These findings challenge the presumption that BCR signaling strength determines MZ B cell fate and suggest the interplay of other forces.
+The consensus view of B cell maturation is a linear developmental program from bone marrow precursors, culminating in a bifurcation in which fully mature FO or MZ B cells emerge from late-stage transitional (T2) B cells in the spleen~\cite{Allman_1993, Rolink_1998,  Loder_1999,  Allman_2001, Su_2002, Verma_2007, Allman_2008, Pillai_2005}~(\textbf{Fig.~\ref{fig:MZ_dev}}). 
+%The developmental cues that dictate this decision are not completely defined, but it has been proposed that T2 B cells receiving strong B cell receptor (BCR) signals during development differentiate into FO B cells, while those receiving weaker BCR signals develop into MZ B cells~\cite{Cariappa_2001, Seo_2001, Samardzic_2002,  Pillai_2005}.
+The developmental cues that dictate this decision are not completely defined but it has been shown that Notch2 mediated signaling is essential for MZ B cell fate-determination~\cite{Tanigaki_2002, Saito_2003, Witt_2003, Hozumi_2004}.
+Studies characterizing modulations in B cell receptor (BCR) signaling components suggest that strong BCR signals during development lead to preferential development into FO B cell fate, while weaker signals lead to MZ B cell development~\cite{Cariappa_2001, Seo_2001, Samardzic_2002,  Pillai_2005}.
+
+\para{Shifting paradigms of MZ B cell development.}
+Reports showing distinct antibody repertoires of MZ and FO B cells and preferential enrichment of transgenic BCR clones within either MZ or FO B cell compartment, lend further support to the importance of BCR signals in B cell fate selection~\cite{Lopes_Carvalho_2004, Martin_2000, Chen_1997, Ghraichy_2021, Carey_2008,  Yang_Shih_2002, Zikherman_2012, Tsiantoulas_2017}.
+Considering their instructive role in B cell development, it can be argued that \textbf{BCR signals can potentially mark lineage commitment towards either MZ or FO B cells even in very early stage transitional (T1) B cells, which is one of the hypotheses we will explore in this project}.
+Findings from several studies suggest potential heterogeneity in the T1 B cell subset -- some cells preferentially and directly differentiate into MZ B cells, whereas others mature into T2 B cells and follow the bifurcation program~\cite{Hammad_2017, Tan_2009, Roundy_2010, Hampel_2011}.
+Our recent study demonstrated that even fully mature FO B cells can differentiate into MZ B cells, in a Notch2 dependent manner~\cite{Lechner_2021}. %. 
+%How BCR and Notch2 derived signals interact to drive B cell fate-decisions remains unknown.
+{We postulate that B cells' potential to develop into MZ fate is modulated continuously by manifold of signals they receive during maturation and will define methods to pinpoint and quantify their role in governing developmental transitions in maturing B cells.}
+% quantify their efficiency of differentiating into MZ B cells, across diverse maturational stages. %continuum. % and as a function of their re 
+
+%Furthermore, other studies have found that MZ B cells are enriched for auto-reactive and high affinity BCR clones~\cite{Martin_2001, Yang_Shih_2002, Zikherman_2012, Tsiantoulas_2017}. 
+%These findings challenge the presumption that BCR signaling strength determines MZ B cell fate and suggest the interplay of other forces.
 %These findings question the instructive nature of developmental imprinting in B cell lineage and suggest that the differentiation potential of developing B cells can be modulated by the micro-environmental signals that they receive during their maturation in the spleen.
 
-\para{Competition and signal integration in MZ B cell fate.}
-%The disruption of Notch2 signaling from the T1 stage onwards results in a dose-dependent MZ B cell deficiency~\cite{Saito_2003, Witt_2003, Hozumi_2004, Tan_2009, Tanigaki_2002}  while  FO B cell numbers are unaffected~\cite{Tanigaki_2002}. 
-Notch2 mediated signaling is essential for MZ B cell development and its disruption from the T1 stage onwards results in a dose-dependent reduction in MZ B cell numbers~\cite{Tanigaki_2002, Saito_2003, Witt_2003, Hozumi_2004, Tan_2009}  while  FO B cell numbers remain unaffected~\cite{Tanigaki_2002}. 
-Conversely, constitutive Notch2 signaling within developing B cells favors differentiation into MZ over FO B cells~\cite{Hampel_2011, Lechner_2021}.
-These results suggest that under homeostatic conditions competition for the Notch2 ligand -- Delta like ligand-1 (Dll-1)~\cite{Hozumi_2004, Fasnacht_2014} -- may act as a fate determinant. 
-The implication of BCR signals described above then raises the possibility that strong signals received by high affinity BCR clones modulates their sensitivity to Notch2 signals and push them into MZ fate, \textbf{which is one of the hypotheses we will explore in this project}.
-A mechanistic understanding of this interplay of developmental cues will allow us to map the clonal dynamics of MZ and FO B cells and will aid in developing interventions against autoimmune pathologies.
-
+%\para{Competition and signal integration in MZ B cell fate.}
+%%The disruption of Notch2 signaling from the T1 stage onwards results in a dose-dependent MZ B cell deficiency~\cite{Saito_2003, Witt_2003, Hozumi_2004, Tan_2009, Tanigaki_2002}  while  FO B cell numbers are unaffected~\cite{Tanigaki_2002}. 
+%Notch2 mediated signaling is essential for MZ B cell development and its disruption from the T1 stage onwards results in a dose-dependent reduction in MZ B cell numbers~\cite{Tanigaki_2002, Saito_2003, Witt_2003, Hozumi_2004, Tan_2009}  while  FO B cell numbers remain unaffected~\cite{Tanigaki_2002}. 
+%Conversely, constitutive Notch2 signaling within developing B cells favors differentiation into MZ over FO B cells~\cite{Hampel_2011, Lechner_2021}.
+%These results suggest that under homeostatic conditions competition for the Notch2 ligand -- Delta like ligand-1 (Dll-1)~\cite{Hozumi_2004, Fasnacht_2014} -- may act as a fate determinant. 
+%The implication of BCR signals described above then raises the possibility that strong signals received by high affinity BCR clones modulates their sensitivity to Notch2 signals and push them into MZ fate, \textbf{which is one of the hypotheses we will explore in this project}.
+%A mechanistic understanding of this interplay of developmental cues will allow us to map the clonal dynamics of MZ and FO B cells and will aid in developing interventions against autoimmune pathologies.
+%
 
 \para{Open questions relating to MZ B cell dynamics.}
 Understanding how the size and BCR diversity of the MZ B cell compartment change with age requires a detailed quantification of the rules governing loss, self-renewal, onward differentiation, and replenishment from precursors. 
@@ -165,7 +178,7 @@ In particular, MZ B cell diversity is boosted by the influx of clones with new B
 Therefore, measuring the relative contributions of these processes is crucial for understanding how the MZ B cell repertoire evolves across a lifetime. 
 For example, is replacement of existing MZ B cells by new immigrants or by self-renewal purely stochastic, or is it hierarchical -- for example, recent immigrants have a survival advantage (first-in, first-out)?
 Or does selection or adaptation drive the establishment of persistent MZ B cell populations that resist replacement by newer cells (first-in, last-out)?
-Further, experiments with conditional RAG2 deletion~\cite{Hao_2001} or IL-7 signaling blockade~\cite{Carvalho_2001} have demonstrated that MZ B cell numbers can be maintained life-long without replenishment from precursors.
+Further, experiments with conditional RAG2 deletion~\cite{Hao_2001} or IL-7 signaling blockade~\cite{Carvalho_2001} have demonstrated that MZ B cell numbers can be maintained life-long without replenishment from new immigrants from the BM.
 This observation implies that MZ B cell self-renewal and/or survival can be modulated to compensate for the reduced influx of new immigrants.
 Such `quorum-sensing', which may operate through competition for homeostatic signals or `space', may manifest in old age, when bone marrow production declines~\cite{Kline_1999, Keren_2011, Scholz_2013}.
 It may also manifest early in life, when the MZ B cell niche is being established and cell numbers are low.
@@ -175,37 +188,44 @@ In this proposal, \textbf{we will quantify MZ B cell population dynamics in deta
 Early life is a critical phase of immune development in which newly generated lymphocytes quickly populate and adapt to rapidly changing tissue environments.
 Studying these dynamics early in life is important because they leave a strong imprint on lymphocyte subset numbers and diversity in the longer term~\cite{Farber_2013, Hogan_2015, Gaimann_2020,  Davenport_2020}.
 Substantial evidence shows that lymphocyte dynamics are distinct in neonates and adults~\cite{LeCampion_2002, Scho_nland_2003,Reynaldi_2019}. 
-We recently demonstrated that FO B cell development becomes progressively more efficient in the first few weeks of life~\cite{Verheijen_2020}.
-Development of MZ B cells is relatively slow in both humans and rodents, a process which may underlie the susceptibility of infants to encapsulated bacterial infections~\cite{MacLennan_1985, Mond_1995, Martin_2002}.
+We recently reported that FO B cell development becomes progressively more efficient in the first few weeks of life~\cite{Verheijen_2020} and naive CD8 T cells turnover more rapidly in neonates than in adults~\cite{Rane_2022}.
+Such quantitative descriptions of MZ B cell development and maintenance in early life are currently absent.
+%Development of MZ B cells is relatively slow in both humans and rodents, a process which may underlie the susceptibility of infants to encapsulated bacterial infections~\cite{MacLennan_1985, Mond_1995, Martin_2002}.
 In this proposal, \textbf{we will examine the neonatal dynamics of MZ B cells in detail to understand how this key subset is established, and how and when the transition to mature, steady-state dynamics occurs.}
 
 
 \para{Fate-mapping during an immune response:} 
 Exposure to pathogens drives seismic changes in B cell behavior and the lymphatic environment. Antigen-specific B cells proliferate rapidly, interact with T cells, and then are recruited into germinal center (GC) reactions. 
 How and to what degree immune responses impact MZ B cell dynamics, particularly their clonal composition, is unclear.
-It has been shown that B cells responding to T-dependent~\cite{Liu_1988, Yang_Shih_2002} and T-independent~\cite{Vinuesa_2003} antigen acquire MZ B cell phenotype and localize into the MZ upon immunization.
-In this project, we will map B cell differentiation pathways during an ongoing immune response to study this process in detail. %develop a comprehensive understanding of MZ B cell dynamics, upon antigenic activation.}
+It has been shown that B cells responding to T-dependent~\cite{Liu_1988, Yang_Shih_2002} and T-independent~\cite{Vinuesa_2003} antigen acquire the MZ B cell phenotype and localize into the MZ upon immunization.
+In this project, we will map B cell differentiation pathways during a T-dependent immune response to study this process in detail. %develop a comprehensive understanding of MZ B cell dynamics, upon antigenic activation.}
 In particular, \textbf{we will infer precursor-progeny relationships in the B cell lineage and the clonal trajectories of antigen-specific cells as they diversify during immune responses to identify processes that regulate the BCR repertoire diversity of MZ B cells.}
 %synthesize dynamical models and phylogenetic approach that tracks clonal trajectories of antigen-specific B cell clones as they diversify during immune responses 
  
 
-
-
 \para{Clinical relevance:}
-MZ B cells are enriched with poly-reactive clones~\cite{Chen_1997, Dammers_2000, Bendelac_2001, Zouali_2011, Hendricks_2018}, which allows them to react to common pathogenic determinants and to build and maintain a `natural-antibody' repertoire in healthy individuals, even without prior immunization~\cite{Briles_1981,   Cerutti_2013, Reynolds_2014, Kearney_2015, Chen_2018,  Cyster_2019, Stewart_New_2020}.
-This ability is essential for reducing sepsis and morbidity caused by bacterial infections~\cite{Amlot_1985, Brigden_1999, Guinamard_2000, Castagnola_2003,  Kruetzmann_2003, Kruschinski_2004, Sagaert_2007}, but may also play a role in controlling autoimmune pathologies~\cite{Palm_2021}.
-Indeed, in humans MZ B cells are associated with Sjögren's syndrome~\cite{Daridon_2006, Guerrier_2012},  Graves' disease~\cite{Segundo_2001} and autoimmune vasculitis~\cite{Appelgren_2018}. % and are believed to be participating in presentation of self-antigen to auto-reactive T cells~\cite{Palm_2021} in these pathologies.
-%Conversely, low MZ B cell numbers are correlated with autoimmune vasculitis in humans~\cite{Appelgren_2018}, suggestive of their protective role.
-%A quantitative understanding of MZ B cell ontogeny, homeostasis and their immune response dynamics will underpin the development of therapies to regulate their numbers in autoimmune pathologies, and boost their protective activity during infancy and in old age.  
-Outcomes of this proposed study may underpin the development of therapies to regulate MZ B cell numbers in autoimmune disorders and boost their protective activity during infancy and in old age.  
+%MZ B cells are enriched with poly-reactive clones~\cite{Dammers_2000, Bendelac_2001, Zouali_2011, Hendricks_2018}, which react with conserved pathogenic determinants to build and maintain our `natural-antibody' repertoires~\cite{Briles_1981, Reynolds_2014, Kearney_2015, Chen_2018,  Cyster_2019, Stewart_New_2020}.
+%This ability is essential for reducing sepsis and morbidity caused by bacterial infections~\cite{Amlot_1985, Brigden_1999, Guinamard_2000, Castagnola_2003,  Kruetzmann_2003, Kruschinski_2004, Sagaert_2007}, but may also play a role in controlling autoimmune pathologies~\cite{Palm_2021}.
+In humans MZ B cells dysfunction is associated with several autoimmune pathologies~\cite{Palm_2021, Appelgren_2018}, such as Sjögren's~\cite{Daridon_2006, Guerrier_2012} and  Graves' disease~\cite{Segundo_2001}.   
+Outcomes of this study may underpin the development of therapies to regulate MZ B cell numbers in autoimmune disorders, while simultaneously providing a platform for the target-discovery for vaccine design to boost their protective activity during infancy and in old age.
+%The BCR repertoire of MZ B cells in mice and humans is significantly different~\cite{Kibler_2021, Weller_2004, Cerutti_2013, Pillai_2005}.
+This proposal will also explore the effect of repetitive immunizations on BCR clonal structure in the B cell lineage, to closely connect the mouse MZ B cell BCR repertoire dynamics to their physiology in humans.
+
+
 
 \vspace{-2mm}
 \subsection*{B. Innovation}
+\vspace{-2mm}
 \begin{itemize}
     \item We are proposing the first comprehensive, quantitative assessment of the ontogeny and homeostasis of MZ B cells, across the lifespan.
     For the first time, we will measure the tonic replenishment within the MZ B cell compartment, estimate their division and turnover, and evaluate the efficiency of their development from different precursor populations under steady-state conditions.
-    \item Population-structured probabilistic, ODE  and  PDE modeling framework to map proliferative history and maturational transitions in lymphocytes, using a powerful Rag and Ki67 double reporter mouse model. % developed specifically for this study.
-    \item Integration of dynamical modeling with phylogeny-based methods to map precursor-progeny relationships and clonal trajectories in \textbf{antigen-specific B cells} using a novel antigen-inducible mouse model. % developed specifically for this study.
+    \item We define a novel population-structured probabilistic modeling approach to map proliferative history and fate-decisions across the B cell maturational continuum, using data derived from a powerful  Rag2 and Ki67 dual reporter mouse model. %, developed specifically for this study.
+   We also propose an innovative system of linear partial differential equations to model continuous state-transitions in developing B cells. % 
+   \item Close integration of  mechanistic models with dedicated, long-term experiments in mice to probe heterogeneity in MZ B cells and to pinpoint the mechanisms of their maintenance across the lifespan.   
+    \item A unique combination of dynamical modeling and phylogeny-based methods to map precursor-progeny relationships and clonal trajectories in {antigen-specific B cells} using a novel antigen-inducible mouse model. % developed specifically for this study.
+    \item A `triangulation approach' for inferring lymphocyte dynamics that comprises Bayesian model fitting procedures, out-of-sample-validation, and  prediction-averaging from competing models. %Such `triangulation approach' for inferring lymphocyte dynamics using multiple sources of data  is powerful and a crucial element of this proposal. 
+    %All the computational approaches defined here use a blend of model fitting, out-of-sample-validation, and prediction-averaging from competing models. Such ‘triangulation approach’ for inferring lymphocyte dynamics using multiple sources of data is powerful and a crucial element of this proposal.
+
     %mouse model that tracks the kinetics of responding B cells and allows us to model the developmental dynamics of MZ B cells during an immune response.
     %\item Integration of dedicated experimental and mechanistic ODE and PDE models, fitted and selected using state-of-the-art Bayesian approaches. 
     \end{itemize}
@@ -216,9 +236,7 @@ Outcomes of this proposed study may underpin the development of therapies to reg
 
 
 \subsection*{C. Approach}
-
-
-
+\vspace{-1mm}
 \subsection*{Aim 1: Dissect the mechanisms underlying the establishment of MZ B cell niche in neonates.}
 
 In this aim, we will develop population structured probabilistic and mechanistic models to understand and compare the processes that govern the ontogeny and maintenance of the MZ B cells, in young and adult mice.
@@ -268,37 +286,37 @@ Our preliminary evidence showed that MZ B cells in neonates express higher level
 
 
 
-\textbf{{1.c Mosaic: a probabilistic population structured model of MZ B cell development:}}
+\textbf{{1.c Mosaic model: a probabilistic approach to quantify developmental transitions in the B cell lineage:}}
 %Agent-based models (ABM) provide a flexible framework to track individual cells (modeled as agents) and their state transitions in dynamical systems. %such as division, death, differentiation \textit{etc.}
 %However, evaluating and validating ABMs is challenging due to their inherent stochasticity and heavy computational load. %, specifically for large populations. 
 %Here, we propose an innovative coarse-grained population-structured approach to infer birth-death-maturation dynamics during MZ B cell development, using data from Rag2-GFP Ki67-RFP mice.
 %%Modular Stochastic Age-based iterative classes 
+To infer birth-death-maturation dynamics during MZ B cell development, we will develop a fine-grained population-structured model that tracks \textbf{Mo}dular \textbf{S}tochastic \textbf{A}ge-based \textbf{I}terative \textbf{C}lasses within the cohorts of developing B cells, over time.
+We outline the rules of operation of the mosaic model and the fitting procedure below.
 
-To infer birth-death-maturation dynamics during MZ B cell development, we will develop an innovative fine-grained population-structured model that tracks \textbf{Mo}dular \textbf{S}tochastic \textbf{A}ge-based \textbf{I}terative \textbf{C}lasses, over time.
-
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.35\textwidth}
 \centering
-\vspace*{-4mm}
-\includegraphics[width=0.4\textwidth]{Figures/age_abm.pdf}
-\vspace*{-7mm}
-\caption{\textbf{Schematics of the Mosaic model.} Cell-age is defined as the time since cell's exit from the BM.} % map transitions and fate-decisions in the B cell lineage.}}
+%\vspace*{-4mm}
+\includegraphics[width=0.34\textwidth]{Figures/age_abm.pdf}
+\vspace*{-3mm}
+\caption{\textbf{Schematics of the Mosaic model.} Cell-age is defined as the time since BM exit.} % map transitions and fate-decisions in the B cell lineage.}}
 \vspace*{-6mm}
 \label{fig:age_ABM_sketch}
 \end{wrapfigure}
 
 \textbf{\textit{Model structure:}}
-We consider that in a mouse of age $t$, splenic B cell pool consists of cells of varying ages from $a=0$~to~$t$.
+We consider that in a mouse of age $t$ days, splenic B cell pool consists of cells of varying ages from $a=0$~to~$t$.
 We divide this age-distribution into $n$ number of age-classes ($A_{0} ,\ldots, A_{n}$)  of width $\tau$, such that the age-class $A_\alpha$ contains cells of age `$a=\alpha \, \tau$'~(\textbf{Fig.~\ref{fig:age_ABM_sketch}A}).
 Each age-class contains modules ($b_{0} ,\ldots, b_{3}$) carrying cells of differing B cell developmental stages -- T1, T2, FO, and MZ, respectively. %--- $b_{j}$, where $j=0,\ldots,3$ identifies .
-We consider a unidirectional flow between B cell developmental stages, and define $\psi_{j, I}$ and $\psi_{j, E}$, as rates of total influx and efflux for the subset $b_j$, considering all possible pathways as described in~\textbf{Fig.~\ref{fig:age_ABM_sketch}B}.
+We define unidirectional flows between B cell developmental stages, and define $\psi_{j, I}$ and $\psi_{j, E}$, as rates of total influx and efflux for the subset $b_j$, considering all possible pathways as described in~\textbf{Fig.~\ref{fig:age_ABM_sketch}B}.
 The model allows for variation with cell-age and/or between modules for the rates of cell division ($\rho_{j}(a)$) and loss ($\delta_{j}(a)$). 
 We assume that the cell-age is inheritable through division and differentiation.
 
 \textbf{\textit{Operation:}}
-We will initialize this model with $n_0 = (t_\text{0}{}/{\tau}, \tau \ll t_{0})$ number of agents at mouse-birth (\ie~$t_0=1$) and assume that all cells at $t_{0}$ are GFP$^{+}$ and \khi and are uniformly distributed across $n_0$ agents.
+We will initialize this model with $n_0 = (t_\text{0}{}/{\tau}); \tau \ll t_{0}$ number of age-classes at mouse-birth (\ie~$t_0=1$) and assume that all cells at $t_{0}$ are GFP$^{+}$ and \khi and are uniformly distributed across $n_0$ age-classes.
 Our model will take small time steps $\tau$ and at each step the age-class ID is promoted by $\tau$ \ie~$A_\alpha \rightarrow A_{\alpha+\tau}$, signifying flow of cells between age-classes.
-The model then adds a new age-class $A_0$ representing the influx of BM derived cells.
-We assume all BM-derived precursors are GFP$^{+}$ and \khi and enter $m_0$ compartment in $A_0$. 
+The model will then add a new age-class $A_0$ representing the influx of BM derived cells.
+We assume all BM-derived precursors are GFP$^{+}$ and \khi and enter $b_0$ compartment in $A_0$. 
 
 We assume loss and division are Poisson point processes.
 Therefore, the time between these events follows the exponential distribution with likelihood $f(t, p)= p\,e^{-p\,t}$, where $p=$ event probability. 
@@ -313,39 +331,39 @@ In a small time-interval $\tau$ the \textit{per capita} probability of cells to 
 Total numbers and fractions of \khi and GFP$^+$ at time $t: [z_j, k_j, g_j]$.  \\
 
 \begin{tabular}{rl}
-    \textbf{Loss:}  &$P$(loss by death and differentiation): $P_\text{loss}= 1 - e^{-(\delta_{j}(a) + \psi_{j, E}) \, \tau}$ \\
+    \textbf{Loss:}  &\prob(loss by death and differentiation): $P_\text{loss}= 1 - e^{-(\delta_{j}(a) + \psi_{j, E}) \, \tau}$ \\
     &Total number of cells that persist =  $z_{per} \sim Binom(z_j, 1- P_\text{loss})$. \\
-    \\
-    \textbf{Aging:}  & $P$(conversion) of \khi to \klo $P_1=1 - e^{-\beta \, \tau}$  and  GFP$^+$ to GFP$^-$:  $P_2=1 - e^{-\gamma \, \tau}$.\\ %, respectively. \\
+    %\\
+    \textbf{Aging:}  & \prob(conversion) of \khi to \klo $P_1=1 - e^{-\beta \, \tau}$  and  GFP$^+$ to GFP$^-$:  $P_2=1 - e^{-\gamma \, \tau}$.\\ %, respectively. \\
     %&Cell counts of \khi   $k_{age} = (1 - \beta) \, k_j \, z_{per}; \; \text{ and GFP}^+  g_{age} = (1 - \gamma) \,g_j  \, z_{per} $.\\
     &Counts of \khi   $k_{age} \sim U(k_j \cdot z_{per},  P_{1}); \; \text{ and GFP}^+  g_{age} \sim U(g_j \cdot z_{per},  P_{2})$.\\
-    \\
-    \textbf{Division:}  &$P$(division) $P_\text{div}= 1 - e^{-\rho_{j}(a) \, \tau}$ \\
+    %\\
+    \textbf{Division:}  &\prob(division) $P_\text{div}= 1 - e^{-\rho_{j}(a) \, \tau}$ \\
     &Number of new cells due to division = number of new \khi cells: $k_{div} \sim Binom(z_{per} , P_\text{div})$. \\
     &Number of GFP$^+$ cells that undergo division: $g \sim Binom(g_{age}, P_\text{div})$. \\
     %&Stochastic conversion of (with rate $\epsilon$) of GFP$^+$ to GFP$^+$: $g_{div} =  (1-\epsilon) \, g  $.\\ 
-    &$P$(conversion) of GFP$^+$ to GFP$^+$: $P_3=1 - e^{-\epsilon \, \tau}$.\\
+    &\prob(conversion) of GFP$^+$ to GFP$^+$: $P_3=1 - e^{-\epsilon \, \tau}$.\\
     &Number of GFP$^+$ after division events:$g_{div} \sim U(g,  P_3)$.\\ 
-    \\
+    %\\
     \textbf{Maturation:}  &Number of new cells entering from precursors $z_{new} =  \psi_{j, I} \; z_{j-1} \; \tau  \qquad j\neq0$ \\
 \end{tabular}
 
-\vspace{2mm}
+\vspace{1mm}
 Total numbers and fractions of \khi and GFP$^+$ at time $t+\tau:$
 $$\bigg[ z_{j}^* = z_{per} + k_{div} + z_{new}, \quad k_j^* = \frac{k_{age} + k_{div}}{z_{j}^*}, \quad g_j^* = \frac{ g_{age} + g_{div}}{z_{j}^*}\bigg].$$
 
 \end{mybox}
-
-We will track total numbers and counts of \khi and GFP$^+$ cells across all modules stages in all existing age-classes.
-We will include sub-models within our framework to -- compare the candidate pathways of MZ B development: differentiation of (i) both T2 and FO ($\psi_{3}\neq0$) or (ii) only T2 ($\psi_{3} = 0$) into MZ~(\textbf{Fig.~\ref{fig:age_ABM_sketch}B}); and explore various forms (exponential, Hill-function \textit{etc.}) of cell-age dependence in division and loss.
+\vspace{1mm}
+We will track total numbers and counts of \khi and GFP$^+$ cells across all the modules in all existing age-classes.
+We will include sub-models within our framework to -- compare the candidate pathways of MZ B development, for example, differentiation of (i) T1, T2 and FO ($\psi_{3}\neq0, \psi_{4}\neq0$) or (ii) only T2 ($\psi_{3} = \psi_{4} = 0$) into MZ~(\textbf{Fig.~\ref{fig:age_ABM_sketch}B}); and will explore various forms (exponential, Hill-function \textit{etc.}) of cell-age dependence in division and loss.
 
 \para{{1.d Model validation and selection:}} \label{sec:stats-validation}
 
-We will use the Markov Chain Monte Carlo (MCMC) sampling methods to estimate the joint density of model predictions to feed into the likelihood function and the model parameters. % $(\theta)$.
-Each model will be fitted simultaneously to three sets of observations -- cell counts ($y_{m,1}$), fraction of {GFP$^+$} ($y_{m,2}$) and {\khi} cells ($y_{m,3}$) within MZ B cells, where $m$ denotes mice ($m = 1,\ldots,n$) of varying ages ($\sim1\text{--}20$ weeks, for neonatal dataset).
+We will use the Markov Chain Monte Carlo (MCMC) sampling methods to estimate the model parameters and the joint density of model predictions that feeds into the likelihood function. % $(\theta)$.
+Each model will be fitted simultaneously to three sets of observations -- cell counts ($y_{m,1}$), fraction of {GFP$^+$} ($y_{m,2}$) and {\khi} cells ($y_{m,3}$) within MZ B cells, where $m$ denotes mice ($m = 1,\ldots,n$) of varying ages ($\sim1\text{--}20$ weeks, for the neonatal dataset).
 The joint density of the observations in each animal is defined as, $y_{m}=(y_{m,1}, y_{m,2}, y_{m,3})$.
 We assume that $y_{m}$ have independent multivariate normal distributions with mean $\mu_{m}=(\mu_{m,1}, \mu_{m,2}, \mu_{m,3})$ and covariance matrix $D = \text{diag}(\sigma_{1}^{2}, \sigma_{2}^{2}, \sigma_{3}^{2})$.
-Here, $\mu_{m, i} = f_{i}(t, \theta)$, is the model prediction for  $i^{\text{th}}$ observation in $m^{\text{th}}$ animal of age $t$.
+Here, $\mu_{m, i} = f_{i}(t, \theta)$, is the model prediction for  $i^{\text{th}}$ observation in $m^{\text{th}}$ animal of age $t$ days.
 The posterior distribution of model parameters $(\theta, D)$ will be sampled from the joint prior density, using MCMC and following the Metropolis-Hastings algorithm. % of MCMC.
 We will use averaged likelihood across $\sim100$ simulations for a sampled set to estimate its posterior probability. 
 %The `prior' distributions are defined based on existing knowledge regarding their values.
@@ -368,10 +386,10 @@ W_j = \frac{\text{exp}\big(\widehat{\text{elpd}^j_\text{loo}} - \frac{1}{2}\text
 \end{equation} 
 As the {elpd} estimates are derived from LOO cross validation, $W$ is interpreted as the confidence in a model's ability to predict new data, relative to all the other models under consideration.
 
-\begin{wrapfigure}{r}{0.22\textwidth}
+\begin{wrapfigure}{r}{0.24\textwidth}
 \centering
 \vspace*{-4mm}
-\includegraphics[width=0.22\textwidth]{Figures/ODE_approx.pdf}
+\includegraphics[width=0.24\textwidth]{Figures/ODE_approx.pdf}
 \vspace*{-7mm}
 \caption{\textbf{Maps of cell-flux between GFP-Ki67 quadrants in the ODE approximation.} 
 For example, GFP Ki67 double positive cells have four possible state-transitions (red arrows), while GFP Ki67 double negatives can only move to GFP$^-$ Ki67$^+$ quadrant or remain double negative (blue arrows).}
@@ -384,11 +402,11 @@ Identifying sources of noise in biological data is notoriously challenging.
 Typically, experimental data contain noise due to stochastic variation in biological processes and errors associated with experimental techniques.
 Probabilistic models can efficiently capture these but tend to be computationally expensive.
 It is generally belived that, when dealing with cell populations on the order of millions, stochastic effects are completely swamped by noise stemming from experimental error and inter-animal variation.
-In such regimes, when age-classes in the Mosaic model contain thousands of cells, we will use mean-field approximations and will define ODE systems to predict their mean behavior, assuming central limit theorem. 
+In such regimes, when age-classes in the Mosaic model contain over thousands of cells, we will use their mean-field approximations and will define ODE systems to predict their mean behavior, assuming central limit theorem. 
 Essentially, we will divide the age-class in four quadrants based on GFP and Ki67 status (+ve or -ve). % within each module in an age-class. 
 We will formulate ODE models to track movement of cells between quadrants as they promote to the next age-class, at each time step~(\textbf{Fig.~\ref{fig:ode_approx}}).
 We will also track movement among the modules (developmental stages).
-Sum of all quadrants gives total numbers. % for the module $b_j$ in age-class $A_i$.
+Here, sum of all quadrants gives total numbers. % for the module $b_j$ in age-class $A_i$.
 The power of this approach is that ODE models can be solved relatively much quickly and can be incorporated in pre-established fitting procedures in \textit{R} or \textit{Stan} programming languages.
 
 \textbf{\textit{Modeling continuous representations of cell-states:}}
@@ -430,78 +448,60 @@ We will limit the value of $n$ based on the lower bound on GFP intensity observe
 It can be then solved numerically to derive GFP density at time~$t$, which can be integrated from threshold GFP intensity ($\bar{g}$) to 1, to obtain the fraction of GFP$^{+}$ cells. 
 
 
-%Experiments: Notch2 KO adoptive transfer.
 \para{{1.f Feedback from modeling to physiology -- MZ B cell development in B cell-specific deficiencies:}}
-%Using the fits from neonatal data, 
 Our models can be adapted to simulate MZ B cell development in settings where their niche is either partially or completely empty. % MZ B cell .
 We propose a system to validate these models and their predictions using mouse strains that carry B cell-specific Notch2$^{+/-}$ and Notch2$^{-/-}$ mutations, which contain a dose-dependent reduction in MZ B cell numbers~\cite{Witt_2003, Saito_2003}.
-Transplanting purified T2 or FO B cells from Rag2-GFP Ki67-RFP (CD45.1) Notch2-sufficient donors in these Notch2 mutants (CD45.2 background) will allow us to compare their efficiency to differentiate into MZ B cells and to quantify the influence of population density MZ B cell maintenance. 
+Transplanting purified T1, T2 or FO B cells from Rag2-GFP Ki67-RFP (CD45.1) Notch2-sufficient donors in these Notch2 mutants (CD45.2 background) will allow us to compare their efficiency to differentiate into MZ B cells and to quantify the influence of population density on MZ B cell maintenance. 
 %We will compare the efficiency of development of MZ B cells from T2 and FO B cells and will explore the influence of population density on their precursor-influx and turnover.
 This out-of-sample prediction approach reconciles over-reliance of the model selection process on information criteria. % and allows us to compare developmental efficiency of MZ B cells from T2 and FO B cells.
 Further, it provides the means \textbf{to predict clinical outcomes in MZ B cell deficient conditions such as, vaccine responses in infants and elderly, where MZ B cell numbers are substantially reduced.
 }
 
-%
-%Delayed MZ B development. Efficiency in early life. Effect on clonal dynamics or clonal archiving. Neonatal versus adult MZ B repertoire. Effect of empty lymphoid niches? Imprinting?
-%
-%Decline in GFP high cells -- due to differences in development (\ie division or increased time in transitional stages.) or enrichment of relatively older cells in the MZ pool. Contribution from FO B pool?
-%Hypothesis: Efficiency of T2 to MZ is very low. but of first t2 develop to Fo, then FO can support MZ development. hence the delay. 
-%critical finding about B cell developmental pathways/dynamics. therapeutic targets to boost competence against blood-borne systemic pathogens in early life and in elderly.
-%Study may also reveal processes susceptible to malignant transformations in B cell lymphoma.
-%
-
-
-
 \subsection*{Aim 2: Quantify the steady-state dynamics of MZ B cells -- modeling the kinetics of their\\ renewal and replacement throughout life}
 
 In this aim, we will probe the heterogeneity in  turnover and replacement dynamics of MZ B cells, by integrating the data from irradiation-free BM chimera mouse models into deterministic ODE systems.
-
-%We will integrate data from a BM chimera mouse models -- generated using either a transplant-conditioning drug or a culture-based enrichment technique -- into a deterministic modeling strategy to explain MZ B cell dynamics across the lifespan.
 
 \para{{2.a Rationale and background:}}
 Identifying the precise nature of heterogeneity in lymphocyte population is notoriously difficult, for example, DNA labeling experiments equivocally support many models of compartmental diversity in multiple  T and B cell lineages~(CITEs).
 Conventionally, MZ B cells are considered to be an autonomously regulated homogeneous population of persistent, self-renewing cells. 
 However, accurate descriptions of the rules governing precursor-influx, division, death, and differentiation in MZ B cells are lacking and the degree to which these processes regulate their pool size and BCR repertoire diversity, is poorly understood. 
 Reports showing their long-term maintenance in the absence of influx from BM-derived precursors~\cite{Carvalho_2001, Hao_2001} provide a strong support for quorum sensing in MZ B cells.   
-There is also age-associated modulation in MZ B cell frequencies and BCR repertoire~\cite{Birjandi_2011, Cortegano_2017}(C).
-Lastly, multiple reports advocate for inherent variation in B cells' sensitivity to enter and/or persist within the MZ B cell compartment based on the strength and/or frequency of BCR and Notch2 mediated interactions. %signals they receive during their lifetime~(CITES).
-\textbf{We hypothesize that MZ B cell population is dynamically regulated by an interplay of multiple processes and will explore the role of diverse cell-intrinsic and -extrinsic factors in governing their pool size and BCR clonal architecture.
+There is also age-associated modulation in MZ B cell frequencies and BCR repertoire~\cite{Birjandi_2011, Cortegano_2017}.
+Lastly, multiple reports advocate for inherent variation in B cells' sensitivity to enter and/or persist within the MZ B cell compartment based on the strength and/or frequency of BCR and Notch2 mediated interactions~(CITEs). %signals they receive during their lifetime~(CITES).
+\textbf{We hypothesize that MZ B cell population is dynamically regulated by an interplay of multiple processes and will explore the role of diverse cell-intrinsic and -extrinsic factors in governing their pool size and BCR clonal diversity.
 }
 
-We will combine a well-established BM transplantation system -- which provides empirical estimates of tonic replenishment and proliferative history of MZ B cells -- with an array of mechanistic models to gain quantitative insights into their development and maintenance.
-Our studies providing unifying explanations of dynamics of multiple lymphocyte subsets across the lifespan using similar fate-mapping approaches, including an innovative carbon-dating study, serve as a proof-of-principle for this strategy~\cite{Rane_2018, Mold_2019, Verheijen_2020, Rane_2022}.
 
-
-
-\begin{wrapfigure}{r}{0.42\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}
 \centering
-\vspace*{-4mm}
-\includegraphics[width=0.41\textwidth]{Figures/BUCHI_diag.pdf}
-\vspace*{-1mm}
+\vspace*{-7mm}
+\includegraphics[width=0.4\textwidth]{Figures/BUCHI_diag.pdf}
+\vspace*{-6mm}
 \caption{\textbf{MZ B cell dynamics in busulfan chimeras.}
 \textbf{(A)} Strategy to generate busulfan chimeras.
 \textbf{(B)} Flow-cytometry plots (at $\sim$5 weeks post transplant) showing strategy to identify donor and host cells in MZ (CD23$^-$, IgM$^\text{hi}$, CD21$^\text{hi}$) subset in B (B220$^+$) cells in recipients.% FSC is proxy for cell-size. 
 }
 \label{fig:BUCHI}
-\vspace*{-6mm}
+\vspace*{-7mm}
 \end{wrapfigure}
+
+We will combine a well-established BM chimera system -- which provides empirical estimates of tonic replenishment and proliferative history of MZ B cells -- with an array of mechanistic models to gain quantitative insights into their development and maintenance.
+Our studies providing unifying explanations of dynamics of multiple lymphocyte subsets across the lifespan using similar fate-mapping approaches, including an innovative carbon-dating study, serve as a proof-of-principle for this strategy~\cite{Rane_2018, Mold_2019, Verheijen_2020, Rane_2022}.
+
 \para{\textit{Busulfan chimera system:}}
 The use of irradiation to generate BM chimeras not only ablates haematopoietic stem cells (HSC) but also partially or completely wipes out the peripheral lymphoid compartments.
 Thus, the dynamics of lymphocytes as they reconstitute following donor BM transplant does not reflect their behavior at steady state in a healthy animal.
 Here, we generate BM chimeras by transferring cells from donor mice on a CD45.2 background into congenic recipients (CD45.1)  treated with low doses of a transplant conditioning drug (busulfan)  (\textbf{Fig.~\ref{fig:BUCHI}A}). 
-This treatment selectively ablates HSC in the BM, but the sizes of peripheral T and B cell subsets remain similar in busulfan-treated and untreated mice~\cite{Hogan_2019}. 
-The power of this approach is that it allows us to study the unperturbed behavior of MZ B cells at steady-state, without complications from, for example, the increased rates of cell division usually observed in lymphopenic conditions. \\
+This treatment selectively ablates HSC in the BM, but the sizes of peripheral T and B cell subsets remain similar in treated and untreated mice~\cite{Hogan_2019}. 
+The power of this approach is that it allows us to study the unperturbed behavior of MZ B cells at steady-state, without complications from, for example, the increased rates of cell division usually observed in lymphopenic conditions.
+%\textbf{Strategy:} 
+We will generate BM chimeras (> 60 recipients of ages between 8 -- 20 weeks) using an optimized dose of busulfan~(10~$\mu$g/g of body weight~\cite{Hogan_2019}) and will track the host and donor cells in the MZ B cell compartment~(\textbf{Fig.~\ref{fig:BUCHI}B}) and its precursors, over a 1-year window.
 
-
-\vspace*{-4mm}
-\textbf{Strategy:} 
-We will generate BM chimeras (> 60 recipients of ages between 8 -- 20 weeks) using an optimized dose of busulfan~(10~$\mu$g/g of body weight~\cite{Hogan_2019}) and will track the host and donor cells within the MZ B cell compartment~(\textbf{Fig.~\ref{fig:BUCHI}B}) and its precursors, over a 1-year window.
-
-\begin{wrapfigure}{l}{0.44\textwidth}
+\begin{wrapfigure}{l}{0.42\textwidth}
 \centering
 \vspace*{-4mm}
-\includegraphics[width=0.44\textwidth]{Figures/Ki_data.pdf}
-\vspace*{-7mm}
+\includegraphics[width=0.42\textwidth]{Figures/Ki_data.pdf}
+\vspace*{-6mm}
 \caption{
 \textbf{(A)} Kinetics of total numbers and \textbf{(B)} normalized donor fraction of MZ B cells.
 \textbf{(C)} Ki67 expression across B cell developmental stages. 
@@ -511,14 +511,14 @@ We will generate BM chimeras (> 60 recipients of ages between 8 -- 20 weeks) usi
 \end{wrapfigure}
 \para{{2.b Insights from preliminary data:}}
 %We identified donor and host cells by antibody staining for CD45.1 and CD45.2 within MZ B cells, defined as IgM$^\text{high}$ CD23$^-$ CD21$^\text{high}$ (\textbf{Fig.~\ref{fig:BUCHI}B}). 
-Our preliminary results reveal that total (donor + host) MZ B cell numbers are stably maintained throughout life (\textbf{Fig.~\ref{fig:BUCHI_data}A}), consistent with previous observations in WT mice~\cite{Hao_2001, Carvalho_2001}.
+Our preliminary results reveal that total (donor + host) MZ B cell numbers are stably maintained throughout life (\textbf{Fig.~\ref{fig:BUCHI_data}A}, left panel), consistent with previous observations in WT mice~\cite{Hao_2001, Carvalho_2001}.
 The fraction of donor cells in all BM precursor and transitional B cell populations in the spleen each attain steady state as early as 2 weeks post BM transplant (BMT), in line with our previously published data~\cite{Verheijen_2020}. 
-However, we saw that the donor fraction within MZ B cells stabilizes slowly relative to other mature lymphocyte populations (> 40 weeks; \textbf{Fig.~\ref{fig:BUCHI_data}B}).
+However, we saw that the donor fraction within MZ B cells stabilizes slowly relative to other mature lymphocyte populations (> 40 weeks; \textbf{Fig.~\ref{fig:BUCHI_data}A, right panel}).
 In particular, the host:donor composition of FO B cells equilibrates within approximately 20 weeks~\cite{Verheijen_2020}, suggesting that FO B cells are either developmental ancestors of MZ B cells, or diverge from the MZ B cell pathway at an earlier branch-point.
 
 We will also use concurrent measurements of  a nuclear protein Ki67, which is expressed upon entry into the cell cycle and remains detectable for $\sim$4 days on lymphocytes~\cite{Gossel_2017, Verheijen_2020}, to determine the extent of cell-division in MZ B cells and their precursors.
-Analysis of Ki67 expression revealed a unimodal shift in its distribution through development in BM and spleen (Pre-B, transitional, and mature B cells; \textbf{Fig.~\ref{fig:BUCHI_data}C}), indicating a progressive decline in proliferative activity with cell age.
-We observed elevated levels of Ki67 in donor-derived cells relative to host cells soon after BMT, but they converged after $\sim$6 months~(\textbf{Fig.~\ref{fig:BUCHI_data}D}).
+Analysis of Ki67 expression revealed a unimodal shift in its distribution through development of B cells in BM and spleen (Pre-B, transitional, and mature B cells; \textbf{Fig.~\ref{fig:BUCHI_data}B}), indicating a progressive decline in proliferative activity with developmental progression.
+We observed elevated levels of Ki67 in donor-derived cells relative to host cells soon after BMT, but they converged after $\sim$6 months~(\textbf{Fig.~\ref{fig:BUCHI_data}C}).
 This dynamic can derive from residual Ki67 expression on newly entered cells and/or from intrinsic differences in the ability to divide or die of young (donor) and relatively older (host) cells.
 We will distinguish between these possibilities in our modeling framework.
 
@@ -528,20 +528,20 @@ The levels at which host:donor ratios stabilize in each subset vary across mice,
 \begin{wrapfigure}{r}{0.22\textwidth}
 \centering
 \vspace*{-9mm}
-\includegraphics[width=0.21\textwidth]{Figures/Nfd_expl.png}
-\vspace*{-3mm}
+\includegraphics[width=0.22\textwidth]{Figures/Nfd_expl.png}
+\vspace*{-8mm}
 \caption{{The $f_\text{d}$ kinetic  reflects net-loss rates, and heterogeneity in cell dynamics.}}% and clonal diversity.}}
 \label{fig:Repop}
-%\vspace*{1mm}
+\vspace*{-2mm}
 \end{wrapfigure}
 ~
 \begin{equation}\small
-f_\text{d} = \frac{\text{Donor cell numbers}}{\text{Total cell numbers} \times \chi}, \;\; \text{where } \chi  =\text{ source chimerism.}
+f_\text{d} = \frac{\text{Donor cell numbers}}{\text{Total cell numbers} \times \chi}, \;\; \text{where } \chi  =\text{Source chimerism}
 \label{eq:Nfd}
 \end{equation}
-%This quantity is essentially a measure of turnover; 
 $f_\text{d}$ represents the degree to which replacement of cells in a given subset mirrors the replacement within its source population.
-This normalization allows us to fit a single model to data from multiple mice, who may responded differently to busulfan. % treatment.
+This normalization allows us to fit a single model to data from multiple mice, who respond differently to busulfan treatment.
+
 
 \para{\textit{Identifying population structures within MZ B cells:}}
 The kinetics of infiltration of donor cells can reveal the kinetic substructure of lymphocyte populations.
@@ -574,7 +574,8 @@ The dynamics of {\khi} ($H$) and {\klo} ($L$) cells within MZ B cell population 
 Here, $\beta$ is the rate of loss of Ki67 expression post-division, and $\epsilon$ is the proportion \khi within the precursor population ($P$).
 We assume that equations in (\ref{eq:neutral_ki}) hold identically for donor and host cells, and can be combined to represent the sizes of donor ($M_{d}$), host ($M_{h}$) and total MZ ($M = M_{d} + M_{h}$) B cell pools as,
 {\small
-\begin{equation}\small\dot M_{d}(t) = \phi \, \chi \, P(t) - \lambda \, M_{d}(t) \quad \quad \quad
+\begin{equation}\small
+\dot M_{d}(t) = \phi \, \chi \, P(t) - \lambda \, M_{d}(t) \quad \quad \quad
 \dot M_{h}(t) = \phi \, (1-\chi) \, P(t) - \lambda \, M_{h}(t) \quad \quad \quad
 \dot M(t) = \phi \, P(t) - \lambda \, M(t).
 \label{eq:neutral_chi}
@@ -596,41 +597,7 @@ For the population out of equilibrium, the kinetic of $f_\text{d}$ is governed b
 \para{\textit{The impact of host age on MZ B cell maintenance:}}
 The dynamics of MZ B cells can also be explained by simple extensions of the neutral model, in which the \textit{per capita} rate of influx of new cells from the precursor population~$\phi$, the rate of cell division $\rho$, or the rate of loss $\delta$  are assumed to vary with host age (time-dependence), perhaps due to changes in  the cellular micro-environment.
 We will define three sub-models that allow time-dependent variation in only one process at a time and within each sub-model we will test different forms (exponential, logistic, \textit{etc.}) with which the rates of influx, division, and loss vary with the mouse age.
-The time-dependent models also assume kinetic homogeneity such that at any given instant all cells in the MZ B cell population exhibit the same 
-rates of division and turnover. 
-
-\para{\textit{Distinguishing potential precursors of MZ B cells:}}
-We assume that the rate of influx of newly differentiated cells into the MZ B cell compartment is proportional to the size of their precursor population, which we consider to be either T1, T2, or FO B cells.
-The time-courses of total counts, donor chimerism, and \khi fraction of MZ B cell precursors will be described using phenomenological functions and will be validated separately using observations from busulfan chimeric mice.
-Our goal is to build a framework that identifies the combination of the mechanistic model and the precursor population that best describes MZ B cell dynamics. % in diverse experimental settings.
-
-\para{\textit{Model validation and selection:}}
-Model definitions, the prior distribution of parameters and the likelihood functions will be encoded in the \textit{Stan} language.
-We will use Hamiltonian Monte Carlo algorithm in \textit{Stan} to estimate the model parameters and the errors associated with the empirical measurements.
-The models will ranked and selected using the LOO cross validation method, as described in section~\ref{sec:stats-validation}.
-
-
-\begin{wrapfigure}{r}{0.53\textwidth}
-\centering
-\vspace*{-5mm}
-\includegraphics[width=0.53\textwidth]{Figures/tdt_fm_fit.pdf}
-\vspace*{-7mm}
-\caption{\textbf{Time dependence in MZ B cell turnover.} 
-Model fits to the time courses of \textbf{(A)} total cell numbers, \textbf{(B)} normalized donor fraction, and  \textbf{(C)} the proportion of \khi cells in host and donor subsets of MZ B cells from the model in which MZ B cells develop from FO B cells and their lifespan decreases gradually with mouse age. Fitted values were specific to each mouse, with its particular age at BMT. 
-Model predictions (lines with 95\% credible intervals as envelopes) shown here were generated using the mean ages within different age at BMT bins, denoted by different colors in A and B and shown as separate panels in C.}
-\label{fig:model-fit}
-\vspace*{-6mm}
-\end{wrapfigure}
-\para{{2.d Insights from preliminary modeling:}}
-We compared the fits from neutral and time-dependent models to MZ B cell dynamics in busulfan chimeras.
-In our preliminary analysis, the time-varying-loss model in which MZ B cell loss rate ($\delta$) increases exponentially with time received strongest ($W$~=~98\%) statistical support from the data~(\textbf{Fig.~\ref{fig:model-fit}})  over the neutral model and the models with time-dependence in influx or division rates.
-The time-varying-loss model favored differentiation from FO B cells as the dominant pathway of MZ B cell generation at steady-states, and estimated $\sim$8\% daily replacement in the MZ pool.
-The mode estimates the average lifespan of MZ B cells is $\sim$20 days in a 6 weeks old mouse, and it halves almost every year.
-Also, MZ B cells divide very rarely  (estimate of mean interdivisional time is $\sim$3 months), suggesting that their \khi fraction is largely driven by the inheritance from precursor and is likely a residual signal from the division of B cell progenitors in the BM. 
-
-\para{2.e Alternate mechanisms of MZ development and maintenance:} \label{sec:buchi_models2}
-We will explore additional plausible mechanisms of MZ B cell development and maintenance and will test their ability to explain MZ B cell dynamics in busulfan chimeras in comparison and combination with neutral and time‐dependent models.
-
+%The time-dependent models also assume kinetic homogeneity such that at any given instant all cells in the MZ B cell population exhibit the same rates of division and turnover. 
 
 \para{\textit{Quorum-sensing:}}
 Studies of MZ B cell homeostasis show that their numbers are maintained even in the absence of BM-derived influx~\cite{Hao_2001, Carvalho_2001}.
@@ -639,7 +606,15 @@ We will define extensions of the `neutral' model in which MZ B cell turnover, di
 This strategy will allow us to understand whether MZ B cell density % (0-1\% of total B cells in Notch2$^{-/-}$, 2-4\% in Notch2$^{+/-}$, and 6-8\% in WT controls)
 exerts feedback on the influx of new cells or on their division or retention within the niche.
 
-
+\begin{wrapfigure}{r}{0.34\textwidth}
+\centering
+\vspace*{-4mm}
+\includegraphics[width=0.34\textwidth]{Figures/KHmodels.pdf}
+\vspace*{-7mm}
+\caption{{Models assuming kinetic heterogeneity in the MZ B cell compartment.}}% and clonal diversity.}}
+\label{fig:khmodels}
+\vspace*{-6mm}
+\end{wrapfigure}
 \para{\textit{Kinetic heterogeneity:}}
 The kinetic of $f_\text{d}$ in MZ B cells appears biphasic, increasing  sharply in the first 3 months and then approaching an asymptote of 1 very slowly over the next~$\sim$15 months~(\textbf{Fig.~\ref{fig:BUCHI}D}).
 Conceptually, this dynamic can be explained by a model in which MZ B cells comprise two independent subpopulations that are lost and/or divide at different rates. 
@@ -647,47 +622,86 @@ We will explore two variants of this `kinetic heterogeneity' model~(\textbf{Fig.
 (1) The branched model --  in which newly entered cells are partitioned into a `fast' subset with rapid kinetic and a `slow' subset that divides and dies more slowly.
 (2) The maturation model --  in which all precursors enter the fast subset which then mature with a constant \textit{per capita} rate into the slower subset~(\textbf{Fig.~\ref{fig:khmodels}B}).
 
-
-\begin{wrapfigure}{l}{0.32\textwidth}
-\centering
-\vspace*{2mm}
-\includegraphics[width=0.32\textwidth]{Figures/KHmodels.pdf}
-\vspace*{-5mm}
-\caption{{Models assuming kinetic heterogeneity in the MZ B cell compartment.}}% and clonal diversity.}}
-\label{fig:khmodels}
-\vspace*{-4mm}
-\end{wrapfigure}
-
 In both of these models, an initial rapid increase in donor chimerism, due to replacement of cells with faster turnover, is followed by a more gradual approach to stable chimerism as the slower subpopulation is replaced.
 Similarly, a decline in donor {\khi} proportions to the lower level observed in host cells~(\textbf{Fig.~\ref{fig:BUCHI}D}) can be explained by the equilibration of the fast/slow composition of the donor compartment over time.
 %Additionally, declining enrichment of rapidly dividing `fast' cells in the donor compartment over time following the BMT  may explain the distinct dynamics of \khi proportions observed in donor and host subsets~(Fig.~\ref{fig:ki67_div}B).
 We will assume identical dynamics of fast and slow cells within the donor and host subsets and define them as in eq.~\ref{eq:neutral_ki}, which then can be combined to derive the proportion of \khi expressing cells in donor and host populations.
 The kinetics of the pool size and normalized donor fraction will be determined as in the neutral model, using eqs.~(\ref{eq:neutral_chi}-\ref{eq:nfd_derive2}).
 
- 
+
+\para{\textit{Birth-death privilege model:}}
+Another potential explanation of heterogeneity is selection acting on the natural variation in cells' ability to enter and/or persist within the population.  
+Such variation may be the result of differences in BCR affinity for self-antigen or heritable differences in the expression of receptors for homeostatic cues, such as Notch2~\cite{Witt_2003, Saito_2003} or the BAFF (B cell-activating factor) receptor~\cite{Thien_2004, Thompson_2001}.
+We assume that the homeostatic fitness of each cell entering the MZ B compartment follows a lognormal or powerlaw distribution ($f_{\phi}(\lambda)$) and its ability to persist within the population is inherited by the progeny after self-renewal. 
+The dynamics of donor ($M_{d}$), host ($M_{h}$) and total ($M$) MZ B cells can be defined similar to as in eq.~\ref{eq:neutral_chi},
+\begin{equation} \small
+%\text{}, \quad
+\dot M_{d}(t) = \phi \, \chi \, f_{\phi}(\lambda) - \lambda \, M_{d}(\lambda, t) \quad \quad \quad
+\dot M_{h}(t) = \phi \, (1-\chi) \, f_{\phi}(\lambda) - \lambda \, M_{h}(\lambda, t) \quad \quad \quad
+\dot{M} = \phi \,P(t) \, f_{\phi}(\lambda) - \lambda \, M(\lambda, t).
+\end{equation}
+In this scenario, MZ B cell clones with lower net-loss rate $\lambda$ (higher fitness) are selected positively and will accumulate over time.
+This model predicts faster replacement of host MZ B cells by that of donor-derived cells in younger chimeric animals than in older recipients, as fitter clones are enriched in the MZ B pool with age.
+%Therefore, this model predicts a steeper initial slope for the kinetic of $f_d$, as the replacement of host MZ B cells by donor-derived cells is relatively more rapid and pronounced in younger busulfan chimeric animals than in older chimera, due to enrichment of fitter clones with age.
+
+
+
+\para{\textit{Distinguishing potential precursors of MZ B cells:}}
+We assume that the rate of influx of new cells into the MZ B cell compartment is proportional to the size of their precursor population, which we consider to be either T1, T2, or FO B cells.
+The time-courses of total counts, donor chimerism, and \khi fraction of MZ B cell precursors will be described using phenomenological functions and will be validated separately using observations from busulfan chimeric mice.
+Our goal is to build a framework that identifies the combination of the mechanistic model and the precursor population that best describes MZ B cell dynamics. % in diverse experimental settings.
+
+
+\begin{wrapfigure}{r}{0.49\textwidth}
+\centering
+\vspace*{-5mm}
+\includegraphics[width=0.48\textwidth]{Figures/tdt_fm_fit.pdf}
+\vspace*{-3mm}
+\caption{\textbf{Time dependence in MZ B cell turnover.} 
+Model fits to the time courses of \textbf{(A)} total cell numbers, \textbf{(B)} normalized donor fraction, and  \textbf{(C)} the proportion of \khi cells in host and donor subsets of MZ B cells from the model in which MZ B cells develop from FO B cells and their lifespan decreases gradually with mouse age. Fitted values were specific to each mouse, with its particular age at BMT. 
+Model predictions (lines with 95\% credible intervals as envelopes) shown here were generated using the mean ages within different age at BMT bins, denoted by different colors in A and B and shown as separate panels in C.}
+\label{fig:model-fit}
+\vspace*{-6mm}
+\end{wrapfigure}
+
+\para{\textit{Model validation and selection:}}
+Model definitions, the prior distribution of parameters and the likelihood functions will be encoded in the \textit{Stan} language.
+We will use Hamiltonian Monte Carlo algorithm in \textit{Stan} to estimate the model parameters and the errors associated with the empirical measurements.
+The models will be ranked and selected using the LOO cross validation method, as described in section 1d. %~\ref{sec:stats-validation}.
+
+
+\para{{2.d Insights from preliminary modeling:}}
+We compared the fits from neutral and time-dependent models to MZ B cell dynamics in busulfan chimeras.
+In our preliminary analysis, the time-varying-loss model in which MZ B cell loss rate ($\delta$) increases exponentially with time received strongest ($W$~=~98\%) statistical support from the data~(\textbf{Fig.~\ref{fig:model-fit}})  over the neutral model and the models with time-dependence in influx or division rates.
+The time-varying-loss model favored differentiation from FO B cells as the dominant pathway of MZ B cell generation at steady-states, and estimated $\sim$8\% daily replacement in the MZ pool.
+The model estimates the average lifespan of MZ B cells is $\sim$20 days in a 6 weeks old mouse, and it halves almost every year.
+Also, MZ B cells divide very rarely  (mean interdivisional time is $\sim$3 months), suggesting that their \khi fraction is largely driven by the inheritance from precursor and is likely a residual signal from the division of B cell progenitors in the BM. 
+
+%\para{2.e Alternate mechanisms of MZ development and maintenance:} \label{sec:buchi_models2}
+%We will explore additional plausible mechanisms of MZ B cell development and maintenance and will test their ability to explain MZ B cell dynamics in busulfan chimeras in comparison and combination with neutral and time‐dependent models.
+
 \para{2.f Potential pitfalls and alternative approaches.}
 We expect efficient discrimination between models based on the data derived from the busulfan chimera system.
 However, low resolution in the LOO-based model selection criteria is a possibility.
-We will use information from a conditional Ki67-reporter mouse model to further refine our model selection process.
-In these mice, cells undergoing division during a drug (Tamoxifen) treatment permanently express the yellow fluorescence protein (YFP), such that it is only lost through cell death or onward differentiation. %, post-treatment.
-Measuring the frequencies of YFP$^+$ cells in these reporter mice will provide an independent handle on the net-loss rate $\lambda$ of MZ B cells.
-To illustrate, in the neutral model $\lambda$ relates to the fold loss in YFP expression ($\Delta Y$) over time $t$ as $\lambda = - \text{log}(\Delta Y)/t$.
-
-\para{\textit{Chimeras in non-conditioned mice using c-Kit system:}}
-To further facilitate the model selection process, we will employ a novel BM chimera system, in which culture-enriched donor hematopoietic stem cells (HSCs) are engrafted in un-manipulated, non-conditioned mice, as described in~\citet{Ochi_2021}.
+%We will use information from a conditional Ki67-reporter mouse model to further refine our model selection process.
+%In these mice, cells undergoing division during a drug (Tamoxifen) treatment permanently express the yellow fluorescence protein (YFP), such that it is only lost through cell death or onward differentiation. %, post-treatment.
+%Measuring the frequencies of YFP$^+$ cells in these reporter mice will provide an independent handle on the net-loss rate $\lambda$ of MZ B cells.
+%To illustrate, in the neutral model $\lambda$ relates to the fold loss in YFP expression ($\Delta Y$) over time $t$ as $\lambda = - \text{log}(\Delta Y)/t$.
+%\para{\textit{Chimeras in non-conditioned mice using c-Kit system:}}
+To further facilitate the model selection process, we will employ a novel BM chimera system, in which culture-enriched donor hematopoietic stem cells (HSCs) are engrafted in un-manipulated, non-conditioned mice, as described in ref.~\citenum{Ochi_2021}.
 We will use the polyvinyl alcohol based media~\cite{Wilkinson_2020} to selectively expand HSCs from magnetically purified c-Kit$^+$ BM cells in cultures.
-We will generate >~40 BM chimeras by transplanting these cultured HSCs (CD45.1) into non-conditioned recipient mice (CD45.2 background).
-This system resembles the busulfan chimera approach, since here too we will use donor BM-derived HSCs to reconstitute \textbf{unperturbed peripheral lymphocyte compartments} of the recipient mice.
-Analyzing kinetics of invasion of donor-derived cells in peripheral B cell compartments in these chimeras thus provides an \textbf{independent validation} of the models of MZ B cell dynamics that we outlined above.
-%This ‘triangulation’ approach, fitting models simultaneously to multiple sources of data, is powerful and rarely performed in immunological settings.
+We will generate >~40 BM chimeras by transplanting these cultured HSC (CD45.1) into non-conditioned recipient mice (CD45.2 background).
+This system resembles the busulfan chimera approach, since here too we will use donor BM-derived HSC to reconstitute {unperturbed peripheral lymphocyte compartments} of the recipient mice.
+Analyzing kinetics of invasion of donor-derived cells in peripheral B cell compartments in these chimeras thus provides an {independent validation} of the models of MZ B cell dynamics that we outlined above.
 
+\para{\textit{BCR transgenic donor chimeras:}}
+%The c-Kit system can potentially be used to study the effect of BCR signaling on MZ B cell development and maintenance.
+We will use c-Kit$^+$ system to make chimeras from donor mice carrying VH81x heavy chain.
+VH81x pairs with endogenous light chains to generate a limited BCR repertoire, capable of recognizing self-antigens, and has been shown to divert development of B cells exclusively towards the MZ fate~\cite{Martin_2000, Hammad_2017}.
+We will compare the kinetics of donor fraction in chimeras generated using VH81x and will-type donors to study the effect of BCR signaling on MZ B cell development and maintenance; and to validate the models that assume heterogeneity in MZ B cells, {\ie} the birth-death privilege and kinetic heterogeneity model. % versus models with heterogenous population structure
+If necessary, we will use transgenic donors carrying MD2 heavy chain that drives development away from the MZ fate~\cite{Martin_2000}.
 
-%\para{\textit{Hierarchical modeling using Bayesian approach:}}
-%We will divide the  data derived from Busulfan and c-kit chimera systems into two groups and fit the models described in sections~\ref{sec:buchi_models}~and~\ref{sec:buchi_models2} to them simultaneously, using the hierarchical Bayesian approach. 
-%We will allow for group-level variation in model parameters, for example, net-loss rate $\lambda$ are drawn from a global distribution, which is shared across mice in these two experimental systems.
-%We analyze data from Busulfan and c-Kit chimera together but as two separate groups.
-%We assume the parameters in the models (such as per capita loss rate or rates of differentiation) are drawn from a global distribution which is shared across mice in UK and Munich labs. This allows us to combine the information from two (or more) experimental settings into a giant meta-analysis framework.
-
+%also expand c-Kit system to generate chimeras from RAG/Ki67 dual reporter donors and will employ the mosaic model to distinguish development
 
 
 \para{{Feedback from modeling to experiments -- persistence in Notch2 mutants:}}
@@ -696,30 +710,29 @@ To achieve this, we will track dynamics of MZ B cells (CD45.1) that are transfer
 The quorum-sensing model predicts that the transferred cells would maintain their numbers or may even fully replenish the MZ B cell compartments, in Notch2 mutants.
 All other models predict loss of transferred MZ B cells over time.
 Conceptually, the kinetic heterogeneity model accommodates a possibility in which transferred cell numbers decline initially, as fast population depletes, but then are maintained stably by a long-lived, self-renewing slow population.
-%
-%\para{{2.g Minimizing  mechanistic bias in model predictions:}}
-%The true causal structure of MZ B cell homeostasis may lie at the intersection of two or more mechanisms discussed above.
-%Additionally, mechanistic models may introduce directional prejudice -- consistently too high or too low predictions. 
-%An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions is to averaging predictions from multiple likely models~\cite{Dormann:2018}.
-%This strategy may also reduce the expected variance in predicting out-of-sample data~\cite{Wintle:2003, Dormann:2018}, and is used routinely to generate reliable predictions  in weather forecasting and in ecological modeling.
-%Here, we will report the weighted average ($\widetilde{Y}$) of the predictions from the models that received strong support from the data (weights estimated using eq.~\ref{eq:model-weights}) as,
-%{\small
-%\vspace{-1mm}
-%\begin{equation} 
-%%\widetilde{Y} = \sum_{m=1}^{M} W_{m} \, \widehat{Y_{m}}, \quad \quad  \quad \text{with } \text{var}(\widetilde{Y}) = \sum_{m=1}^{M} W_{m}^{2} \, \text{var}(\widehat{Y_{m}}) + \sum_{m=1}^{M} \sum_{m \neq m'} W_{m} W_{m'} \text{cov}(\widehat{Y_{m}}, \widehat{Y_{m'}}).
-%\widetilde{Y} = \sum_{m=1}^{M} W_{m} \, \widehat{Y_{m}}, \quad \quad  \quad
-%\text{with } \text{var}(\widetilde{Y}) =  \sum_{m=1}^{M} \sum_{m'=1}^{M} W_{m} W_{m'} \text{cov}(\widehat{Y_{m}}, \widehat{Y_{m'}}).
-%\label{eq:model-averaging}
-%\vspace{-2mm}
-%\end{equation}
-%}%
+
+
+\para{2.g Prediction-averaging to minimize  mechanistic bias:}
+The true causal structure of MZ B cell homeostasis may lie at the intersection of two or more mechanisms discussed above.
+Additionally, mechanistic models may introduce directional prejudice -- consistently too high or too low predictions. 
+%An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions and in out-of-sample variance, is to averaging predictions from multiple likely models~\cite{Wintle:2003, Dormann:2018}.
+An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions, is to averaging predictions from multiple likely models. 
+This strategy may also reduce the expected variance in predicting out-of-sample data~\cite{Wintle:2003, Dormann:2018}, and is used routinely to generate reliable predictions  in weather forecasting and in ecological modeling.
+Here, we will report the weighted average ($\widetilde{Y}$) of the predictions from the models that received strong support from the data (weights estimated as in eq.~\ref{eq:model-weights}),
+\vspace{-1mm}
+\begin{equation} \small
+%\widetilde{Y} = \sum_{m=1}^{M} W_{m} \, \widehat{Y_{m}}, \quad \quad  \quad \text{with } \text{var}(\widetilde{Y}) = \sum_{m=1}^{M} W_{m}^{2} \, \text{var}(\widehat{Y_{m}}) + \sum_{m=1}^{M} \sum_{m \neq m'} W_{m} W_{m'} \text{cov}(\widehat{Y_{m}}, \widehat{Y_{m'}}).
+\widetilde{Y} = \sum_{m=1}^{M} W_{m} \, \widehat{Y_{m}}, \quad \quad  \quad
+\text{with } \text{var}(\widetilde{Y}) =  \sum_{m=1}^{M} \sum_{m'=1}^{M} W_{m} W_{m'} \text{cov}(\widehat{Y_{m}}, \widehat{Y_{m'}}).
+\label{eq:model-averaging}
+\vspace{-2mm}
+\end{equation}
 %The variance of the averaged predictions depends on the co-variances between models $m$ and $m'$~(ref.~\citenum{Dormann:2018}).
-%\vspace*{-3mm}
 
 
 
 
-
+%\vspace*{-2mm}
 \subsection*{Aim 3: Define and model MZ B cell fate-determination during immune responses}
 \vspace*{-1mm}
 In this aim, we will develop an array of dynamical models to map the fate(s) of mature FO, MZ and germinal center (GC) B cells responding to a T-dependent (TD) antigen, during the primary immune response.
@@ -728,11 +741,11 @@ We will then employ a phylogeny-based approach to analyze single-cell immune rep
 
 \para{{3.a Rationale and background:}}
 Immune activation induces major changes in the lymphatic environment and exposes lymphocytes to a wide variety of interactions and stimuli, which dramatically alter their dynamics. 
-Specifically, activated B cells interact with antigen-presenting cells, receive help from antigen-specific T cells, and then participate in germinal center (GC) reactions within follicles, where they proliferate rapidly and differentiate into plasma and memory B cells. 
+Specifically, activated B cells interact with antigen-presenting cells, receive help from cognate-specific T cells, and then participate in germinal center (GC) reactions within follicles, where they proliferate rapidly and differentiate into plasma and memory B cells. 
 Antigen-specific B cells with the MZ B cell phenotype have been shown to emerge in the splenic marginal zone.~\cite{Liu_1988, Yang_Shih_2002}.
 However, the mechanistic details of their generation and accumulation remain unclear.
 \textbf{We postulate that antigenic activation triggers a fate-decision in responding FO and/or GC B cells to develop into MZ B cells, potentially depending on the availability of Notch2 signals. }
-Here, we will quantify the efficiency and kinetic differentiation pathways in the B cell lineage during an ongoing immune response, using a novel fate-reporter mouse model that specifically tracks activated B cells.
+Here, we will quantify the efficiency and the kinetic of differentiation pathways in the B cell lineage during an ongoing immune response, using a novel fate-reporter mouse model that specifically tracks activated B cells.
 
 
 \para{{3.b Insights from preliminary data -- interplay of BCR and Notch2 signals during B cell response:}}
@@ -747,11 +760,9 @@ The progeny of these crossings are described below.
 \begin{wrapfigure}{r}{0.28\textwidth}
 \centering
 \vspace*{-7mm}
-\includegraphics[width=0.28\textwidth]{Figures/Cg1_data_mm.pdf}
-\vspace*{-6mm}
-\caption{\textbf{(A)} B cells responding to the NP-CGG antigen develop into MZ B cells in  control/CAR mice.
-\textbf{(C)} Activated B cells do not differentiate into MZ B cells in N2KO/CAR mice. 
-Overlay of B220$^+$ IgM$^\text{high}$ splencoytes (blue) with CAR$^+$ cells (red). %, at day 14 post immunization.
+\includegraphics[width=0.27\textwidth]{Figures/Cg1_data_mm.pdf}
+\vspace*{-2mm}
+\caption{Overlay of splenic B220+ B cells (blue) with CAR+ B cells (red) from control/CAR \textbf{(A)} and N2KO/CAR \textbf{(B)} mice 14 days after immunization. MZB cells are gated as CD21$^\text{high}$ CD23$^\text{low}$. Indicated percentages refer to CAR-expressing B cells.
 }
 \vspace*{-8mm}
 \label{fig:notchic_data}
@@ -769,32 +780,45 @@ In these mice, B cells activation triggers inactivation of Notch2 signaling alon
 When control/CAR mice, in which Notch2 signaling is at physiological levels, are challenged with a TD antigen (4-Hydroxy-3-nitrophenylacetyl conjugated to chicken gamma globulin, NP-CGG), a considerable fraction of reporter$^{+}$ B cells appear in their MZ B cell subset ($\sim$5\% by day 14)~(\textbf{Fig.~\ref{fig:notchic_data}A}).
 These numbers are substantially reduced in N2KO/CAR mice~(\textbf{Fig.~\ref{fig:notchic_data}B}).
 
-\begin{wrapfigure}{l}{0.41\textwidth}
+\begin{wrapfigure}{l}{0.4\textwidth}
 \centering
-\vspace*{-2mm}
-\includegraphics[width=0.41\textwidth]{Figures/fig_7v5.pdf}
 \vspace*{-5mm}
+\includegraphics[width=0.4\textwidth]{Figures/fig_7v5.pdf}
+\vspace*{-7mm}
 \caption{\textbf{Models of MZ B cell generation during TD immunization.}
-Schematics of the models of B cell dynamics during an immune response. % leading to generation of MZ and GC B cells.
-%   \textbf{(B)} Number of CAR$^+$ cells in control (red dots) and N2KO (blue dots) reporter mice, with fits from the branched, time-varying influx model  (lines).
+ \textbf{(A)} Schematics of the models of B cell dynamics during an immune response. % leading to generation of MZ and GC B cells.
+ \textbf{(B)}  Number of CAR$^+$ cells in control (red dots) and N2KO (blue dots) reporter mice, with fits from the branched, time-varying influx model  (lines with 95\% envelopes).
 %   %For clarity of comparison we omitted the 95\% credible intervals (envelopes) around the model predictions.
-   We will allow time and/or density dependent variation in the rates of influx and loss processes, using a nested modeling strategy.
+   %We will allow time and/or density dependent variation in the rates of influx and loss processes, using a nested modeling strategy.
    }
 \label{fig:response_model}
-\vspace*{-4mm}
+\vspace*{-7mm}
 \end{wrapfigure}
 
+\vspace{2mm}
 
 \para{{3.c Insights from preliminary modeling:}}
-To describe pathways of generation of CAR$^+$ MZ B cells in these mice, we defined two models -- (i) branched model where FO B cells bifurcate into GC and MZ fates and (ii) linear  model where GC B cells differentiate into MZ B cells~(\textbf{Fig.~\ref{fig:response_model}}).
+To describe pathways of generation of CAR$^+$ MZ B cells in these mice, we defined two models -- (i) branched model where FO B cells bifurcate into GC and MZ fates and (ii) linear  model where GC B cells differentiate into MZ B cells~(\textbf{Fig.~\ref{fig:response_model}A}).
 In both of these models, we included contribution from direct activation of MZ B cells to the CAR$^+$ MZ B cell pool. %, defined by a \textit{per capita} rate of flux $\beta$.
-Lastly, we define a `null model', in which CAR$^+$ MZ B cells are derived purely by  MZ B cell activation~(\textbf{Fig.~\ref{fig:response_model}}). % with no influx from FO and GC B cells.
-In N2KO/CAR mice, differentiation of either FO or GC B cells into MZ B cells is absent, but GC B cell dynamics are similar to control/CAR mice. % \ie~Notch2 signals do not influence recruitment into or loss of B cells from GC. 
+Lastly, we define a `null model', in which CAR$^+$ MZ B cells are derived purely by the activation of CAR$^-$ MZ B cells~(\textbf{Fig.~\ref{fig:response_model}A}). % with no influx from FO and GC B cells.
+We assume that in N2KO/CAR mice, differentiation of either FO or GC B cells into MZ B cells is absent, but GC B cell dynamics are similar to control/CAR mice. % \ie~Notch2 signals do not influence recruitment into or loss of B cells from GC. 
 We performed a series of immunization experiments using these reporter mice (n > 80) and measured the CAR fraction and total numbers of FO, GC and MZ B cells at 8 timepoints up to a month.
-CAR$^+$ MZ B cells appear as early as day 4 post NP-CGG challenge, and their numbers continue to increase even after a month post immunization.
+CAR$^+$ MZ B cells appear as early as day 4 post NP-CGG challenge, and their numbers continue to increase upto a month post immunization.
+To describe this kinetic, we will explore following substructures in branched, linear and null models. %  during the TD response.
 
-To describe this kinetic, we will explore following substructures in Branched, linear and null models. %  during the TD response.
-
+%\begin{wrapfigure}{r}{0.39\textwidth}
+%\centering
+%\vspace*{-4mm}
+%\includegraphics[width=0.39\textwidth]{Figures/fig_8.pdf}
+%\vspace*{-7mm}
+%\caption{\textbf{B cell dynamics during TD response.}
+%Number of CAR$^+$ cells in control (red dots) and N2KO (blue dots) reporter mice, with fits from the branched, time-varying influx model  (lines with 95\% envelopes).
+%%For clarity of comparison we omitted the 95\% credible intervals (envelopes) around the model predictions.
+%}
+%\label{fig:response_valid}
+%\vspace*{-6mm}
+%\end{wrapfigure}
+%
 \textbf{\textit{Neutral dynamics:}}
 We assume that both GC and MZ B cells follow `neutral' dynamics of birth and death {\ie} their  rates of influx and net-loss remain constant over time. 
 
@@ -806,25 +830,12 @@ We will employ linear, sigmoid and logistic functions to explore time-variation 
 To characterize the effects of feedback regulation on pool sizes of antigen-specific GC and MZ B cell pools, we will explore density-dependent variations in their rates of influx and/or loss.
 
 
-\begin{wrapfigure}{r}{0.39\textwidth}
-\centering
-%\vspace*{-4mm}
-\includegraphics[width=0.39\textwidth]{Figures/fig_8.pdf}
-\vspace*{-7mm}
-\caption{\textbf{B cell dynamics during TD response.}
-Number of CAR$^+$ cells in control (red dots) and N2KO (blue dots) reporter mice, with fits from the branched, time-varying influx model  (lines with 95\% envelopes).
-%For clarity of comparison we omitted the 95\% credible intervals (envelopes) around the model predictions.
-}
-\label{fig:response_valid}
-\vspace*{-6mm}
-\end{wrapfigure}
-
 \textbf{{Model validation:}}
 We define empirical functions of time courses of pool sizes of precursor populations -- CAR$^+$ FO and CAR$^-$ MZ B cells --  to model the influx into MZ and GC compartments.
 Models will be encoded as ODE systems in the \textit{Stan} programming language.
 We will estimate model parameters and rank models using the LOO method described in (section 1.d).
 As groundwork for this proposal, we compared the neutral and time-dependent substructures within the models of CAR$^+$ MZ B cell generation.
-We found that the branched model with time-varying rate of influx of FO B cells in MZ and GC compartments, received strongest support from the data~(model fits shown in~\textbf{Fig.~\ref{fig:response_valid}}).  
+We found that the branched model with time-varying rate of influx of FO B cells in MZ and GC compartments, received strongest support from the data~(model fits shown in~\textbf{Fig.~\ref{fig:response_model}B}).  
 
 %Modeling immune dynamics is challenging due to strong influence of changes in antigen concentration on cellular dynamics. 
 %%The cellular flux in and out of GC reactions is strongly driven by changes in antigenic concentration. 
@@ -840,7 +851,7 @@ We found that the branched model with time-varying rate of influx of FO B cells 
 
 
 \para{3.d Lineage tracing to dissect pathways of MZ B cell generation upon immunization}
-Our preliminary results demonstrate that MZ B cell generation is a normal response to immunization~(Figs.~\ref{fig:notchic_data} \& \ref{fig:response_valid}).
+Our preliminary results demonstrate that MZ B cell generation is a normal response to immunization~(Figs.~\ref{fig:notchic_data} \& \ref{fig:response_model}B).
 However the specifics of their development -- whether pre, early and/or late GCs give rise to antigen-specific MZ B cells -- are still unclear.
 %However, the precise pathway of recruitment of activated B cell clones into the MZ pool remains unclear.
 We hypothesize that an activated B cell at any stage on the FO $\rightarrow$ GC differentiation continuum can be signaled in a Notch2 dependent manner to develop into a MZ B cell.
@@ -863,12 +874,11 @@ using a phylogenetic computational approach to analyze BCR sequencing data to in
 \vspace*{-7mm}
 \end{wrapfigure}
 
-\textbf{\textit{Experimental/computational framework:}}
-We will use the 10x Genomics 5' Single Cell Immune Profiling platform  at the core facility at the Technical University Munich, for single-cell RNA (RNA-seq) and BCR sequencing (BCR-seq) of CAR-expressing FO, GC, and MZ B cells, isolated from control/CAR mice (n = 6), on days 7 and 14 post  NP-CGG challenge. 
-Data will be analyzed using the {Seurat}~\cite{Hao:2021} (RNA-seq) and the Immcantation~\cite{Yaari:2015} (BCR-seq, Kleinstein lab) packages.
-% for analysis of Adaptive Immune Receptor Repertoire sequencing (AIRR-seq) data~\cite{Yaari:2015}.
+\textbf{\textit{Experimental strategy:}}
+We will use the 10x Genomics' $5^\prime$ Single Cell Immune Profiling platform  at the core facility of the Technical University Munich, for single-cell RNA (RNA-seq) and BCR sequencing (BCR-seq) of CAR-expressing FO, GC, and MZ B cells, isolated from control/CAR mice (n = 6), on days 7 and 14 post  NP-CGG challenge. 
+We will analyze the sequencing data using {Seurat}~\cite{Hao:2021} (RNA-seq) and the Immcantation~\cite{Yaari:2015} (BCR-seq, Kleinstein lab) packages. %tfor the analysis of Adaptive Immune Receptor Repertoire sequencing (AIRR-seq) data~\cite{Yaari:2015}.
 
-\textbf{\textit{Single-cell RNA/BCR sequencing analysis.}}
+\textbf{\textit{Computational framework for Single-cell RNA/BCR sequencing analysis.}}
 Pair-end FASTQ reads will be aligned against a mouse reference genome using the gene expression and BCR pipelines in Cell Ranger software (10x Genomics).
 %We will use Seurat to normalize and log-transform gene expression (unique molecular identifier counts) in each cell by total expression.
 Log-transformed gene expression (unique molecular identifier counts) in each cell will be normalized by total expression and 
@@ -890,7 +900,7 @@ We will build a pipeline to generate clonal trees based on patterns of SHM, util
 Density of phylogenetic trees depends on the sampling depth.
 Missing branches and tips in  clonal trees due to under-sampling of  members of clonal families may obscure characterization of the clonal lineages.
 In this scenario, we can distinguish MZ B cell clones that are generated from early (less SHM) or late (more SHM) stages on the FO $\rightarrow$ GC continuum by quantifying the variable degrees of SHM that they accumulate~(\textbf{Fig.~\ref{fig:clone-tree}C}).
-The risk of under-sampling is further mitigated by evidence that the NP-CGG specific response is highly restricted to the V186.2 heavy chain gene segment~\cite{Bothwell_1981, Bothwell_1982}; thus, we expect to generate complete trees of the top immunodominant clones that use V186.2. % this heavy chain segment.
+The risk of under-sampling is further mitigated by the evidence that the NP-CGG specific response is highly restricted to the V186.2 heavy chain gene segment~\cite{Bothwell_1981, Bothwell_1982}; thus, we expect to generate complete trees of the top immunodominant clones that use V186.2. % this heavy chain segment.
 
 %Alternatively, we can distinguish MZ B cell clones that are generated from early (less SHM) or late (more SHM) stages on FO $\rightarrow$ GC continuum by quantifying the variable degree of SHM that they accumulate, using the \textit{dowser} package.
 %Expected outcome -- heterogeneous pattern of mutated and unmutated clones in MZ B cell population.
@@ -905,9 +915,9 @@ In humans, the MZ B cell BCR repertoire is a heterogeneous mixture of un-mutated
 We propose that the former is a result of continuous infiltration and archiving of antigen-specific B cell clones through historical pathogenic exposure.
 To reproduce this process in our mouse model, we will sequentially immunize control/CAR mice and perform  single cell RNA-seq and BCR-seq on CAR expressing B cells isolated on day 14, post secondary and tertiary immunizations (n = 6 mice). %$2\degree$ and $3\degree$ immunizations (n = 6 mice).
 We will generate clonal trees using SHM profiles to determine patterns of clonal evolution among FO, GC, and MZ B cell subsets, after each immunization.
-%In addition, we will quantify the extent of SHM in MZ B cells to understand whether clonal heterogeneity manifests as a result of repetitive immunizations. 
+%In addition, we will compare and quantify the extent of SHM in MZ B cells to understand whether clonal heterogeneity manifests as a result of repetitive immunizations. 
 
-\vspace{1mm}
+%\vspace{1mm}
 \textbf{D. Rigor \& reproducibility:}
 %We explicitly model the effects of host age in our neonatal and chimera analysis, 
 Our published and preliminary results show that the experimental designs and statistical methods in this study are well-suited for the validation of the proposed models. \\ %,  using robust s. \\ %in this study are suitable to generate quantitative data that support mechanistic and dynamical models which are validated using robust statistical methods. \\
