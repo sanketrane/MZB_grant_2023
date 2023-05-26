@@ -129,7 +129,7 @@ Thus, MZ B cells represent a crossover between innate and adaptive immunity, spe
 However, despite their central role in mediating immunity to pathogens in circulation, multiple aspects of MZ B cell biology -- \textbf{{their development, maintenance, longevity, population structure, and their dynamics during immune responses -- remain very poorly characterized.}}
 
 \para{Integrative approaches to understanding MZ B cell biology.}
-Mathematical models are a natural language for addressing knowledge gaps such as these, and have been successfully applied in many settings to dissect the dynamics that regulate lymphocyte populations~\cite{Thomas_Vaslin_1989, Rolink_1999, Asquith_2002, Antia_2005, Anderson_2009, Dowling_2009, Johnson_2012, Meyer-Hermann_2012, De_Boer_2013,  Westera_2013,   Gossel_2017, Hogan_2015, van_Hoeven_2017, Reynaldi_2019, Rane_2018, Mold_2019, Verheijen_2020, Rane_2022}.
+Mathematical models are a natural language for addressing knowledge gaps such as these, and have been successfully applied in many settings to dissect the dynamics that regulate lymphocyte populations~\cite{Thomas_Vaslin_1989, Rolink_1999, Asquith_2002, Antia_2005, Anderson_2009, Dowling_2009, Johnson_2012, Meyer-Hermann_2012, De_Boer_2013,  Westera_2013,   Gossel_2017, Hogan_2015, van_Hoeven_2017, Reynaldi_2019, Rane_2018, Verheijen_2020, Rane_2022, Mold_2019}.
 These approaches complement and enhance the information that can be gained from traditional experimental approaches.
 The overarching goal of the study proposed here is  \textbf{{to synthesize mathematical modeling with dedicated experiments to build a new,  comprehensive, and quantitative understanding of MZ B cell biology.}}
 
@@ -288,10 +288,6 @@ Our preliminary evidence showed that MZ B cells in neonates express higher level
 
 
 \textbf{{1.c Mosaic model: a probabilistic approach to quantify developmental transitions in the B cell lineage:}}
-%Agent-based models (ABM) provide a flexible framework to track individual cells (modeled as agents) and their state transitions in dynamical systems. %such as division, death, differentiation \textit{etc.}
-%However, evaluating and validating ABMs is challenging due to their inherent stochasticity and heavy computational load. %, specifically for large populations. 
-%Here, we propose an innovative coarse-grained population-structured approach to infer birth-death-maturation dynamics during MZ B cell development, using data from Rag2-GFP Ki67-RFP mice.
-%%Modular Stochastic Age-based iterative classes 
 To infer birth-death-maturation dynamics during MZ B cell development, we will develop a fine-grained population-structured model that tracks \textbf{Mo}dular \textbf{S}tochastic \textbf{A}ge-based \textbf{I}terative \textbf{C}lasses within the cohorts of developing B cells, over time.
 We outline the rules of operation of the mosaic model and the fitting procedure below.
 
@@ -318,8 +314,8 @@ We will initialize this model with $n_0$ age-classes, of width $\tau$, which are
 At each time step $\tau$ cells' age classes are incremented by $\tau$ \ie~$A_\alpha \rightarrow A_{\alpha+\tau}$.
 We then repopulate age class $A_0$ with new cells derived from the BM, which enter the $b_0$ module (T1 compartment) and are all GFP$^{+}$ and \khi.
 %We assume all BM-derived immigrants are GFP$^{+}$ and \khi and enter $b_0$ (transitional T1 compartment) within $A_{0}$. 
-We assume division, death, and differentiation are Poisson  processes, such that the time to the next event is exponentially distributed with probability density function $f(t, p)= p\,e^{-p\,t}$, where $p$ represents the respective rate parameter.
-In each finite time interval $\tau$ their event-probability  is  $\int_{0}^{\tau} f(h, p) \, dh = 1 - e^{p \,\tau}$. %, where $p$ is the sum of the respective rate parameters.
+%We assume division, death, and differentiation are Poisson  processes, such that the time to the next event is exponentially distributed with probability density function $f(t, p)= p\,e^{-p\,t}$, where $p$ represents the respective rate parameter.
+%In each finite time interval $\tau$ their event-probability  is  $\int_{0}^{\tau} f(h, p) \, dh = 1 - e^{p \,\tau}$. %, where $p$ is the sum of the respective rate parameters.
 
 %\vspace{1mm}
 \begin{mybox}
@@ -357,7 +353,19 @@ $\bigg[ z_{j}^* = z_{p} + k_{d} + z_{n}, \quad \kappa_j^* = \frac{k_{a} + k_{d}}
 
 \end{mybox}
 %\vspace{1mm}
-We will track total numbers of \khi and GFP$^+$ cells across all modules and age-classes. We will consider sub-models representing candidate pathways of MZ B development; for example, differentiation of (i) T1, T2 and FO ($\psi_{3}\neq0, \psi_{4}\neq0$) or (ii) only T2 ($\psi_{3} = \psi_{4} = 0$) into MZ B cells~(\textbf{Fig.~\ref{fig:age_ABM_sketch}B}). We will also explore models in which division and lost are cell age dependent processes, with various functional forms (exponential, sigmoid), motivated by our previous studies that identified cell age effects on the population dynamics of T cells~\cite{Rane_2022, Rane_2018}.
+%We will track total numbers of \khi and GFP$^+$ cells across all modules and age-classes.
+\textbf{\textit{Nested modeling strategy:}} We will consider sub-models representing candidate pathways of MZ B development; for example, differentiation of (i) T1, T2 and FO ($\psi_{3}\neq0, \psi_{4}\neq0$) or (ii) only T2 ($\psi_{3} = \psi_{4} = 0$) into MZ B cells~(\textbf{Fig.~\ref{fig:age_ABM_sketch}B}).
+We will also explore models in which division and loss are cell age and/or density dependent processes, with various functional forms (exponential, sigmoid), motivated by our previous studies~\cite{Rane_2022, Verheijen_2020, Rane_2018}.% that identified cell age effects on the population dynamics of T cells~\cite{Rane_2022, Rane_2018}.
+
+
+\textbf{\textit{Advance over other approaches:}}
+Typically, Agent-based models or Gillespie solvers can provide a flexible framework to track individual cells and their state transitions in dynamical systems such as the Rag/Ki67 dual reporters. 
+However, evaluating and validating these approaches is extremely challenging due to their inherent stochasticity and heavy computational load, specifically for large populations. 
+Alternatively, high-dimensional PDE systems can be formulated to simultaneously track GFP and Ki67 dynamics but tracking fluxes between multiple developmental stages is difficult using this approach.
+Moreover, these PDE solvers become unstable when population density dependent processes are involved.
+The mosaic model circumvents  
+%Here, we propose an innovative coarse-grained population-structured approach to infer birth-death-maturation dynamics during MZ B cell development, using data from Rag2-GFP Ki67-RFP mice.
+%%Modular Stochastic Age-based iterative classes 
 
 \para{{1.d Model validation and selection:}} \label{sec:stats-validation}
 
@@ -406,17 +414,17 @@ Identifying sources of noise in biological data is notoriously challenging.
 Typically, experimental data contain noise due to stochastic variation in biological processes and errors associated with experimental techniques.
 Probabilistic models can efficiently capture these but tend to be computationally expensive.
 It is generally belived that, when dealing with cell populations on the order of millions, stochastic effects are completely swamped by noise stemming from experimental error and inter-animal variation.
-In such regimes, when age-classes in the Mosaic model contain over thousands of cells, we will %use their mean-field approximations and will 
-define ODE systems to predict their mean behavior, assuming central limit theorem. 
+\red{In such regimes, when age-classes in the mosaic model contain over thousands of cells, we will %use their mean-field approximations and will 
+define ODE systems to predict their mean behavior, following central limit theorem. 
 Essentially, we will divide each module in the age-class in four quadrants based on GFP and Ki67 status (+ve or -ve). % within each module in an age-class. 
 We will initialize the ODE systems with pre-defined number of age classes ($A_n$).
 The ODE models will track movement of cells between the four quadrants and across the adjoining age-classes. %, at each time step~(\textbf{Fig.~\ref{fig:ode_approx}}).
-We will also track movement among the modules.
+We will also track fluxes among the modules.}
 Here, sum of all quadrants gives total numbers. % for the module $b_j$ in age-class $A_i$.
 The power of this approach is that ODE models can be solved relatively much quickly and can be incorporated in pre-established fitting procedures in \textit{R} or \textit{Stan} programming languages.
 
 \textbf{\textit{Modeling continuous representations of cell-states:}}
-The probabilistic (Mosaic) and ODE modeling strategies described above %do not track continuous changes in GFP expression and therefore 
+The probabilistic (mosaic model) and ODE modeling strategies described above %do not track continuous changes in GFP expression and therefore 
 are insensitive to state-transitions associated with incremental changes in GFP intensity. 
 To overcome this, we propose a PDE system that goes beyond binary (+ve v/s -ve) cell-state representations and models simultaneously cell divisions and continuous changes in internal states.
 
@@ -432,9 +440,9 @@ Therefore, the general formulation of the PDE that tracks density $u(t, g)$  of 
 \begin{aligned}
 \small
 \frac{\partial u}{\partial t}  - \beta \,g \, \frac{\partial u}{\partial g} = 2\,  \rho(t) & \, u(t, 2\,g) - \rho(t) \, u(t, g) - \delta(t)  \, u(t, g); 
-\\
-%\qquad \overbrace{ u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t)}.
-\text{with boundary conditions: }& \;  u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t).
+%\\
+\qquad \overbrace{ u(t=0, g) = f(g); \; u(t, g=1) = \phi(t)}^{\text{with boundary conditions}}.
+%\text{with boundary conditions: }& \;  u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t).
 \label{eq:gfp-pde}
 \end{aligned}
 \end{equation}
@@ -485,22 +493,21 @@ Lastly, multiple reports advocate for inherent variation in B cells' sensitivity
 \textbf{We hypothesize that MZ B cells are dynamically regulated by an interplay of multiple processes and will explore the role of diverse cell-intrinsic and -extrinsic factors in governing their pool size and BCR clonal diversity.
 }
 
-
-\begin{wrapfigure}{r}{0.42\textwidth}
+\begin{wrapfigure}{r}{0.4\textwidth}
 \centering
-\vspace*{-4mm}
-\includegraphics[width=0.42\textwidth]{Figures/BUCHI_diag.pdf}
 \vspace*{-6mm}
+\includegraphics[width=0.4\textwidth]{Figures/BUCHI_diag.pdf}
+\vspace*{-7mm}
 \caption{\textbf{MZ B cell dynamics in busulfan chimeras.}
 \textbf{(A)} Strategy to generate busulfan chimeras.
 \textbf{(B)} Flow-cytometry plots (at $\sim$5 weeks post transplant) showing strategy to identify donor and host cells in MZ (CD23$^-$, IgM$^\text{hi}$, CD21$^\text{hi}$) subset in B (B220$^+$) cells in recipients.% FSC is proxy for cell-size. 
 }
 \label{fig:BUCHI}
-\vspace*{-7mm}
+\vspace*{-6mm}
 \end{wrapfigure}
-
 We will combine a well-established BM chimera system -- which provides empirical estimates of tonic replenishment and proliferative history of MZ B cells -- with an array of mechanistic models to gain quantitative insights into their development and maintenance.
-Our studies providing unifying explanations of dynamics of multiple lymphocyte subsets across the lifespan using similar fate-mapping approaches, including an innovative carbon-dating study, serve as a proof-of-principle for this strategy~\cite{Rane_2018, Mold_2019, Verheijen_2020, Rane_2022}.
+Our studies providing unifying explanations of dynamics of multiple lymphocyte subsets across the lifespan using similar fate-mapping approaches, including an innovative carbon-dating study, serve as a proof-of-principle for this strategy~\cite{Rane_2018, Verheijen_2020, Rane_2022, Mold_2019}.
+
 
 \para{\textit{Busulfan chimera system:}}
 The use of irradiation to generate BM chimeras not only ablates haematopoietic stem cells (HSC) but also partially or completely wipes out the peripheral lymphoid compartments.
@@ -549,7 +556,8 @@ The levels at which host:donor ratios stabilize in each subset vary across mice,
 \vspace*{-2mm}
 \end{wrapfigure}
 ~
-\begin{equation}\small
+\begin{equation}
+\small
 f_\text{d} = \frac{\text{Donor cell numbers}}{\text{Total cell numbers} \times \chi}, \;\; \text{where } \chi  =\text{Source chimerism}
 \label{eq:Nfd}
 \end{equation}
