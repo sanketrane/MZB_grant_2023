@@ -133,10 +133,10 @@ Mathematical models are a natural language for addressing knowledge gaps such as
 These approaches complement and enhance the information that can be gained from traditional experimental approaches.
 The overarching goal of the study proposed here is  \textbf{{to synthesize mathematical modeling with dedicated experiments to build a new,  comprehensive, and quantitative understanding of MZ B cell biology.}}
 
-\begin{wrapfigure}{r}{0.3\textwidth}
+\begin{wrapfigure}{r}{0.32\textwidth}
 \centering
 \vspace*{-5mm}
-\includegraphics[width=0.3\textwidth]{Figures/bcell_matu2.jpg}
+\includegraphics[width=0.32\textwidth]{Figures/bcell_matu2.jpg}
 \vspace*{-8mm}
 \caption{\textbf{Developmental transitions within B cell subsets in the spleen.}} %\textbf{(A)} Linear pathway from T1 to FO or MZ. }
 \label{fig:MZ_dev}
@@ -207,9 +207,9 @@ In particular, \textbf{we will infer precursor-progeny relationships in the B ce
 %MZ B cells are enriched with poly-reactive clones~\cite{Dammers_2000, Bendelac_2001, Zouali_2011, Hendricks_2018}, which react with conserved pathogenic determinants to build and maintain our `natural-antibody' repertoires~\cite{Briles_1981, Reynolds_2014, Kearney_2015, Chen_2018,  Cyster_2019, Stewart_New_2020}.
 %This ability is essential for reducing sepsis and morbidity caused by bacterial infections~\cite{Amlot_1985, Brigden_1999, Guinamard_2000, Castagnola_2003,  Kruetzmann_2003, Kruschinski_2004, Sagaert_2007}, but may also play a role in controlling autoimmune pathologies~\cite{Palm_2021}.
 In humans MZ B cell dysfunction is associated with several autoimmune pathologies~\cite{Palm_2021, Appelgren_2018}, such as Sjögren's~\cite{Daridon_2006, Guerrier_2012} and  Graves' disease~\cite{Segundo_2001}.   
-Outcomes of this study may underpin the development of therapies to regulate MZ B cell numbers in autoimmune disorders, or boostingf their numbers to augment vaccine responses.% while simultaneously providing a platform for \red{the target-discovery for vaccine design (??? meaning)}  to boost their protective activity during infancy and in old age.
+Outcomes of this study may underpin the development of therapies to regulate MZ B cell numbers in autoimmune disorders, or boosting their numbers to augment vaccine responses. % while simultaneously providing a platform for \red{the target-discovery for vaccine design (??? meaning)}  to boost their protective activity during infancy and in old age.
 %The BCR repertoire of MZ B cells in mice and humans is significantly different~\cite{Kibler_2021, Weller_2004, Cerutti_2013, Pillai_2005}.
-This proposal will also explore the effect of repetitive immunizations on the BCR repertoire within MZ B cells, which has direct relevance to humans who experience a much higher antigenic burden than laboratory mice.
+We will also explore the effect of repetitive immunizations on the BCR repertoire of MZ B cells, which has direct relevance to humans who experience a much higher antigenic burden than laboratory mice.
 %, to closely connect the mouse MZ B cell BCR repertoire dynamics to their physiology in humans.ls
 
 
@@ -295,13 +295,13 @@ Our preliminary evidence showed that MZ B cells in neonates express higher level
 To infer birth-death-maturation dynamics during MZ B cell development, we will develop a fine-grained population-structured model that tracks \textbf{Mo}dular \textbf{S}tochastic \textbf{A}ge-based \textbf{I}terative \textbf{C}lasses within the cohorts of developing B cells, over time.
 We outline the rules of operation of the mosaic model and the fitting procedure below.
 
-\begin{wrapfigure}{r}{0.36\textwidth}
+\begin{wrapfigure}{r}{0.38\textwidth}
 \centering
 %\vspace*{-4mm}
-\includegraphics[width=0.36\textwidth]{Figures/age_abm.pdf}
+\includegraphics[width=0.38\textwidth]{Figures/age_abm.pdf}
 \vspace*{-6mm}
 \caption{\textbf{Schematics of the Mosaic model.} A cell's age is defined as the time since its ancestor left the bone marrow (BM).} % map transitions and fate-decisions in the B cell lineage.}}
-\vspace*{-6mm}
+\vspace*{-5mm}
 \label{fig:age_ABM_sketch}
 \end{wrapfigure}
 
@@ -316,43 +316,48 @@ We assume that cell age is heritable following division and differentiation.
 \textbf{\textit{Operation:}}
 We will initialize this model with $n_0$ age-classes, of width $\tau$, which are uniformly populated by 1 day after birth (\ie~$t_0=1$, $ n_0= t_\text{0}/{\tau}$ and $\tau \ll t_{0}$). We assume all cells at $t_{0}$ are GFP$^{+}$ and {\khi}.
 At each time step $\tau$ cells' age classes are incremented by $\tau$ \ie~$A_\alpha \rightarrow A_{\alpha+\tau}$.
-We then repopulate age class $A_0$ with new cells derived from the BM. We assume all BM-derived immigrants are GFP$^{+}$ and \khi and enter $b_0$ (transitional T1 compartment) within $A_{0}$. 
+We then repopulate age class $A_0$ with new cells derived from the BM, which enter the $b_0$ module (T1 compartment) and are all GFP$^{+}$ and \khi.
+%We assume all BM-derived immigrants are GFP$^{+}$ and \khi and enter $b_0$ (transitional T1 compartment) within $A_{0}$. 
+We assume division, death, and differentiation are Poisson  processes, such that the time to the next event is exponentially distributed with probability density function $f(t, p)= p\,e^{-p\,t}$, where $p$ represents the respective rate parameter.
+In each finite time interval $\tau$ their event-probability  is  $\int_{0}^{\tau} f(h, p) \, dh = 1 - e^{p \,\tau}$. %, where $p$ is the sum of the respective rate parameters.
 
-%We assume division, loss, and differentiation are Poisson  processes, such that the time to the next event is exponentially distributed with probability density function $f(t, p)= p\,e^{-p\,t}$, with rate parameter $p$. In each finite time interval $\tau$ the probability that a cell divides, dies, or differentiates or  is  $\int_{0}^{\tau} f(h, p) \, dh = 1 - e^{p \,\tau}$, where $p$ is the sum of the respective rate parameters.
-
-\vspace{2mm}
+%\vspace{1mm}
 \begin{mybox}
-\textbf{\textit{Dynamics of the module $b_j$ ($j = 0,\ldots,2$) in age-class $A_\alpha$ ($\alpha = 0,\ldots,n$) at time step $t+\tau$:}} \\
+\textbf{\textit{Dynamics of the module $b_j$ ($j = 0,\ldots,3$) in age-class $A_\alpha$ ($\alpha = 0,\ldots,n$) at time step $t+\tau$:}} \\
 
 \vspace{-3mm}
-~~All cells have age $a= \alpha\, (t+\tau)$. 
-Total numbers and fractions of \khi and GFP$^+$ at time $t: [z_j, k_j, g_j]$.  \\
+All cells have age $a= \alpha\, (t+\tau)$. 
+Total numbers and fractions of \khi and GFP$^+$ at time $t: [z_j, \kappa_j, \phi_j]$. \\
+We will employ a sequential event-mapping algorithm to update the state-vector of module b$_j$\textbf{:}
 
 \begin{tabular}{ll}
-    \textbf{Loss:}  &\prob(loss by death and differentiation): $P_\text{loss}= 1 - e^{-(\delta_{j}(a) + \psi_{j, E}) \, \tau}$ \\
-    &Total number of cells that persist =  $z_{per} \sim \text{Binom}(z_j, 1- P_\text{loss})$. \\
-    %\\
-    \textbf{Aging:}  & \prob(conversion) of \khi to \klo $P_1=1 - e^{-\beta \, \tau}$  and  GFP$^+$ to GFP$^-$:  $P_2=1 - e^{-\gamma \, \tau}$.\\ %, respectively. \\
-    %&Cell counts of \khi   $k_{age} = (1 - \beta) \, k_j \, z_{per}; \; \text{ and GFP}^+  g_{age} = (1 - \gamma) \,g_j  \, z_{per} $.\\
-    &Counts of \khi   $k_{age} \sim \text{Uniform}(k_j \cdot z_{per},  P_{1}); \; \text{ and GFP}^+  g_{age} \sim \text{Uniform}(g_j \cdot z_{per},  P_{2})$.\\
-    %\\
-    \textbf{Division:}  &\prob(division) $P_\text{div}= 1 - e^{-\rho_{j}(a) \, \tau}$ \\
-    &Number of new cells due to division = number of new \khi cells: $k_{div} \sim \text{Binom}(z_{per} , P_\text{div})$. \\
-    &Number of GFP$^+$ cells that undergo division: $g \sim \text{Binom}(g_{age}, P_\text{div})$. \\
+%\\
+    \textbf{(S1) Death:}  &\prob(death): $P_\text{death}= 1 - e^{-\delta_{j}(a) \, \tau}$; number of surviving cells =  $z_{s} \sim \text{Binom}(z_j, 1-P_\text{loss})$. \\
+    \\
+    \textbf{(S2) Efflux:} &\prob(efflux): $P_\text{eff}= 1 - e^{-\psi_{j, E} \, \tau}$; \; number of cells that persist =  $z_{p} \sim \text{Binom}(z_s, 1- P_\text{eff})$. \\
+    & Counts of persisting \khi cells: $k_p = \kappa_j \cdot z_p \quad \text{ and GFP}^+ \text{cells}: f_p = \phi_j \cdot z_p$.\\
+    & Efflux into the next compartment is independent of cells' Ki67 or GFP status. \\
+    & $\implies z_{j+1} = z_{s} - z_{p}; \quad \kappa_{j+1} = \kappa_j  \cdot z_{j+1}; \quad \phi_{j+1} = \phi_j \cdot z_{j+1}.$\\
+    \\
+    \textbf{(S3) Aging:}  & \prob(\khi $\rightarrow$ \klo): $P_1 = \beta \, \tau$  and  \prob(GFP$^+ \rightarrow$ GFP$^-$):  $P_2 = \gamma \, \tau$. \\     &Counts of \khi:  $k_{a} \sim \text{Uniform}(k_p,  1-P_{1}); \; \text{ and GFP}^+:  f_{a} \sim \text{Uniform}(f_p,  1-P_{2})$.\\
+    \\
+    \textbf{(S4) Division:}  &\prob(division) $P_\text{div}= 1 - e^{-\rho_{j}(a) \, \tau} \; \implies$
+    Number of new \khi cells: $k_{d} \sim \text{Binom}(z_{p} , P_\text{div})$. \\
+    &Number of GFP$^+$ cells that undergo division: $F \sim \text{Binom}(f_{a}, P_\text{div})$. \\
     %&Stochastic conversion of (with rate $\epsilon$) of GFP$^+$ to GFP$^+$: $g_{div} =  (1-\epsilon) \, g  $.\\ 
-    &Probability of transition from GFP$^+$ to GFP$^-$: $P_3=1 - e^{-\epsilon \, \tau}$.\\
-    &Number of GFP$^+$ cells after division events:$g_{div} \sim \text{Uniform}(g,  P_3)$.\\ 
-    %\\
-    \textbf{Maturation:}  &Number of new cells entering from precursor pool $z_{new} =  \psi_{j, I} \; z_{j-1} \; \tau,  \;\; j\neq0$ \\
+    &\prob(GFP$^+ \rightarrow$ GFP$^-$ due to division): $P_3 = \epsilon \, \tau$.\\
+    &Number of GFP$^+$ cells after division events: $f_{d} \sim \text{Uniform}(f,  P_3)$.\\ 
+    \\
+    \textbf{(S5) Influx:}  &Number of new cells entering from precursor pool $z_{n} =  \psi_{j, I} \; z_{j-1} \; \tau,  \;\; j\neq0$ \\
 \end{tabular}
 
 \vspace{1mm}
 Total numbers and fractions of \khi and GFP$^+$ at time $t+\tau:$
-$$\bigg[ z_{j}^* = z_{per} + k_{div} + z_{new}, \quad k_j^* = \frac{k_{age} + k_{div}}{z_{j}^*}, \quad g_j^* = \frac{ g_{age} + g_{div}}{z_{j}^*}\bigg].$$
+$\bigg[ z_{j}^* = z_{p} + k_{d} + z_{n}, \quad \kappa_j^* = \frac{k_{a} + k_{d}}{z_{j}^*}, \quad \phi_j^* = \frac{f_{a} + f_{d}}{z_{j}^*}\bigg].$
 
 \end{mybox}
-\vspace{1mm}
-We will track total numbers of \khi and GFP$^+$ cells across all modules and age-classes. We will consider sub-models representing candidate pathways of MZ B development; for example, differentiation of (i) T1, T2 and FO ($\psi_{3}\neq0, \psi_{4}\neq0$) or (ii) only T2 ($\psi_{3} = \psi_{4} = 0$) into MZ B cells~(\textbf{Fig.~\ref{fig:age_ABM_sketch}B}). We will also explore models in which division and lost are cell age dependent processes, with various functional forms (exponential, sigmoid), motivated by our previous studies that identified cell age effects on the population dynamics of T cells \red{CITE}.
+%\vspace{1mm}
+We will track total numbers of \khi and GFP$^+$ cells across all modules and age-classes. We will consider sub-models representing candidate pathways of MZ B development; for example, differentiation of (i) T1, T2 and FO ($\psi_{3}\neq0, \psi_{4}\neq0$) or (ii) only T2 ($\psi_{3} = \psi_{4} = 0$) into MZ B cells~(\textbf{Fig.~\ref{fig:age_ABM_sketch}B}). We will also explore models in which division and lost are cell age dependent processes, with various functional forms (exponential, sigmoid), motivated by our previous studies that identified cell age effects on the population dynamics of T cells~\cite{Rane_2022, Rane_2018}.
 
 \para{{1.d Model validation and selection:}} \label{sec:stats-validation}
 
@@ -370,17 +375,19 @@ Models and the sampler will be coded in custom-written \textit{C++} scripts for 
 \para{\textit{Model selection criteria:}}
 We will estimate the expected log point-wise predictive density (elpd$^{j}$) for each model ($M_{j}$), which is the measure of its performance and out-of-sample prediction accuracy~\citep{Vehtari:2016}, using the leave-one-out (LOO) cross validation method. 
 The LOO process estimates the probability density $P(y_i | y_{-i}, M_j)$ of the prediction of $i^\text{th}$ observation using the model $M_j$ fitted on the data with observation $i$ excluded.
-The elpd estimate is then the sum of the predictive densities of the LOO estimates of all $n$ observations in the data,
+The elpd estimate is then the sum of the predictive densities of the LOO estimates of all $n$ observations in the data~(eq.~\ref{eq:elpd-loo}).
+We then use the estimates of {elpd} and its standard error to calculate the relative support for each model as the model weight ($W$)~(eq.~\ref{eq:elpd-loo}), which is used to rank them using the Pseudo-Bayesian model averaging method~\citep{Yao:2018}.
 \begin{equation} 
 \small
-\widehat{\text{elpd}^j_\text{loo}} = \sum_{i=1}^n  \text{elpd}^j_\text{loo, i}  = \sum_{i=1}^n \log(P(y_i | y_{-i}, M_j), \qquad \text{se}(\widehat{\text{elpd}^j_\text{loo}})  = \sqrt{\sum_{i=1}^n  \big(\text{elpd}^j_\text{loo, i} - \text{elpd}^j_\text{loo}/n \big)^2 }.
+\widehat{\text{elpd}^j} = \sum_{i=1}^n  \text{elpd}^j_\text{i}  = \sum_{i=1}^n \log(P(y_i | y_{-i}, M_j); \; 
+\text{se}(\widehat{\text{elpd}^j})  = \sqrt{\sum_{i=1}^n  \big(\text{elpd}^j_\text{i} - \text{elpd}^j/n \big)^2 }; \;
+W_j = \frac{\text{exp}\big(\widehat{\text{elpd}^j} - \frac{1}{2}\text{se}(\widehat{\text{elpd}^j})\big)}{\sum_{j=1}^J \text{exp}\big(\widehat{\text{elpd}^j} - \frac{1}{2}\text{se}(\widehat{\text{elpd}^j})\big)}
 \label{eq:elpd-loo}
 \end{equation}
-We use the estimates of {elpd} and its standard error~(eq.~\ref{eq:elpd-loo}) to calculate the relative support for each model as the model weight ($W$) and  to rank them using the Pseudo-Bayesian model averaging method~\citep{Yao:2018},
-\begin{equation} \small
-W_j = \frac{\text{exp}\big(\widehat{\text{elpd}^j_\text{loo}} - \frac{1}{2}\text{se}(\widehat{\text{elpd}^j_\text{loo}})\big)}{\sum_{j=1}^J \text{exp}\big(\widehat{\text{elpd}^j_\text{loo}} - \frac{1}{2}\text{se}(\widehat{\text{elpd}^j_\text{loo}})\big)}.
-\label{eq:model-weights}
-\end{equation} 
+%\begin{equation} \small
+%W_j = \frac{\text{exp}\big(\widehat{\text{elpd}^j_\text{loo}} - \frac{1}{2}\text{se}(\widehat{\text{elpd}^j_\text{loo}})\big)}{\sum_{j=1}^J \text{exp}\big(\widehat{\text{elpd}^j_\text{loo}} - \frac{1}{2}\text{se}(\widehat{\text{elpd}^j_\text{loo}})\big)}.
+%\label{eq:model-weights}
+%\end{equation} 
 As the {elpd} estimates are derived from LOO cross validation, $W$ is interpreted as the confidence in a model's ability to predict new data, relative to all the other models under consideration.
 
 \begin{wrapfigure}{r}{0.24\textwidth}
@@ -399,10 +406,12 @@ Identifying sources of noise in biological data is notoriously challenging.
 Typically, experimental data contain noise due to stochastic variation in biological processes and errors associated with experimental techniques.
 Probabilistic models can efficiently capture these but tend to be computationally expensive.
 It is generally belived that, when dealing with cell populations on the order of millions, stochastic effects are completely swamped by noise stemming from experimental error and inter-animal variation.
-In such regimes, when age-classes in the Mosaic model contain over thousands of cells, we will use their mean-field approximations and will define ODE systems to predict their mean behavior, assuming central limit theorem. 
-Essentially, we will divide the age-class in four quadrants based on GFP and Ki67 status (+ve or -ve). % within each module in an age-class. 
-We will formulate ODE models to track movement of cells between quadrants as they promote to the next age-class, at each time step~(\textbf{Fig.~\ref{fig:ode_approx}}).
-We will also track movement among the modules (developmental stages).
+In such regimes, when age-classes in the Mosaic model contain over thousands of cells, we will %use their mean-field approximations and will 
+define ODE systems to predict their mean behavior, assuming central limit theorem. 
+Essentially, we will divide each module in the age-class in four quadrants based on GFP and Ki67 status (+ve or -ve). % within each module in an age-class. 
+We will initialize the ODE systems with pre-defined number of age classes ($A_n$).
+The ODE models will track movement of cells between the four quadrants and across the adjoining age-classes. %, at each time step~(\textbf{Fig.~\ref{fig:ode_approx}}).
+We will also track movement among the modules.
 Here, sum of all quadrants gives total numbers. % for the module $b_j$ in age-class $A_i$.
 The power of this approach is that ODE models can be solved relatively much quickly and can be incorporated in pre-established fitting procedures in \textit{R} or \textit{Stan} programming languages.
 
@@ -414,24 +423,32 @@ To overcome this, we propose a PDE system that goes beyond binary (+ve v/s -ve) 
 
 \textbf{\textit{Population structured PDE model:}}
 We assume that GFP expression declines with cell age exponentially at rate $\beta$ and halves immediately after cell division.
-Therefore, the general formulation of the PDE that tracks density $u(t, g)$  of GFP expressing cells at time $t$ is given as,
-\begin{equation}
-\small
-\frac{\partial u}{\partial t}  - \beta \,g \, \frac{\partial u}{\partial g} = 2\,  \rho(t)  \, u(t, 2\,g) - \rho(t) \, u(t, g) - \delta(t)  \, u(t, g);
-%\text{with the boundary conditions }& \quad u(t=0, g) = f(g), \quad \text{and} \quad u(t, g=1) = \phi(t).
-\label{eq:gfp-pde}
-\end{equation}
-Here, $g$ is the GFP expression normalized to maximum GFP intensity in MZ B cells, such that $0 \le g \le 1$. 
 We will empirically construct the initial distribution of GFP expressing cells ($f(g)$) at time $t_{0}$ from the data and
 assume that new cells entering the compartment have highest GFP intensity ($g=1$).
 %The total influx of new cells is proportional to the total size of the precursor pool and will be defined as $\phi(t)$.
 The total influx into the MZ pool after $t_0$ is given by $\phi(t)$.
-Therefore, the boundary conditions for the PDE in eq.~\ref{eq:gfp-pde} are, 
-\begin{equation*}
+Therefore, the general formulation of the PDE that tracks density $u(t, g)$  of GFP expressing cells at time $t$ is given as,
+\begin{equation}
+\begin{aligned}
 \small
-u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t).
-\end{equation*}
-Here, ($\rho$) and ($\delta$) are \textit{per capita} rates of cell division and loss. % will be derived from the fits to the neonatal data.
+\frac{\partial u}{\partial t}  - \beta \,g \, \frac{\partial u}{\partial g} = 2\,  \rho(t) & \, u(t, 2\,g) - \rho(t) \, u(t, g) - \delta(t)  \, u(t, g); 
+\\
+%\qquad \overbrace{ u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t)}.
+\text{with boundary conditions: }& \;  u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t).
+\label{eq:gfp-pde}
+\end{aligned}
+\end{equation}
+Here, $g$ is the GFP expression normalized to maximum GFP intensity in MZ B cells, such that $0 \le g \le 1$ and ($\rho$) and ($\delta$) are \textit{per capita} rates of cell division and loss.
+%We will empirically construct the initial distribution of GFP expressing cells ($f(g)$) at time $t_{0}$ from the data and
+%assume that new cells entering the compartment have highest GFP intensity ($g=1$).
+%%The total influx of new cells is proportional to the total size of the precursor pool and will be defined as $\phi(t)$.
+%The total influx into the MZ pool after $t_0$ is given by $\phi(t)$.
+%Therefore, the boundary conditions for the PDE in eq.~\ref{eq:gfp-pde} are, 
+%\begin{equation*}
+%\small
+%u(t=0, g) = f(g) \quad \text{ and } \quad u(t, g=1) = \phi(t).
+%\end{equation*}
+ % will be derived from the fits to the neonatal data.
 %To solve this PDE, we will track the division number `$n$' of individual cells. 
 The GFP expression within a cell that has divided $n$ number of times is $2^{-n}$. 
 Therefore, the density of cells with division number $n$ can be defined as $w_{n}(t, g) = u_{n}(t, 2^{-n} g)$, where $u_{n} \ge 0$. % for $0 \le g \le 1$.
@@ -469,10 +486,10 @@ Lastly, multiple reports advocate for inherent variation in B cells' sensitivity
 }
 
 
-\begin{wrapfigure}{r}{0.4\textwidth}
+\begin{wrapfigure}{r}{0.42\textwidth}
 \centering
-\vspace*{-7mm}
-\includegraphics[width=0.4\textwidth]{Figures/BUCHI_diag.pdf}
+\vspace*{-4mm}
+\includegraphics[width=0.42\textwidth]{Figures/BUCHI_diag.pdf}
 \vspace*{-6mm}
 \caption{\textbf{MZ B cell dynamics in busulfan chimeras.}
 \textbf{(A)} Strategy to generate busulfan chimeras.
@@ -715,7 +732,7 @@ Additionally, mechanistic models may introduce directional prejudice -- consiste
 %An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions and in out-of-sample variance, is to averaging predictions from multiple likely models~\cite{Wintle:2003, Dormann:2018}.
 An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions, is to averaging predictions from multiple likely models. 
 This strategy may also reduce the expected variance in predicting out-of-sample data~\cite{Wintle:2003, Dormann:2018}, and is used routinely to generate reliable predictions  in weather forecasting and in ecological modeling.
-Here, we will report the weighted average ($\widetilde{Y}$) of the predictions from the models that received strong support from the data (weights estimated as in eq.~\ref{eq:model-weights}),
+Here, we will report the weighted average ($\widetilde{Y}$) of the predictions from the models that received strong support from the data (weights estimated as in eq.~\ref{eq:elpd-loo}),
 \vspace{-1mm}
 \begin{equation} \small
 %\widetilde{Y} = \sum_{m=1}^{M} W_{m} \, \widehat{Y_{m}}, \quad \quad  \quad \text{with } \text{var}(\widetilde{Y}) = \sum_{m=1}^{M} W_{m}^{2} \, \text{var}(\widehat{Y_{m}}) + \sum_{m=1}^{M} \sum_{m \neq m'} W_{m} W_{m'} \text{cov}(\widehat{Y_{m}}, \widehat{Y_{m'}}).
@@ -792,7 +809,7 @@ These numbers are substantially reduced in N2KO/CAR mice~(\textbf{Fig.~\ref{fig:
 \vspace*{-7mm}
 \end{wrapfigure}
 
-\vspace{2mm}
+%\vspace{1mm}
 
 \para{{3.c Insights from preliminary modeling:}}
 To describe pathways of generation of CAR$^+$ MZ B cells in these mice, we defined two models -- (i) a branched model where FO B cells bifurcate into GC and MZ fates and (ii) a linear  model where GC B cells differentiate into MZ B cells~(\textbf{Fig.~\ref{fig:response_model}A}).
