@@ -129,16 +129,15 @@ Thus, MZ B cells represent a crossover between innate and adaptive immunity, spe
 However, despite their central role in mediating immunity to pathogens in circulation, multiple aspects of MZ B cell biology -- \textbf{{their development, maintenance, longevity, population structure, and their dynamics during immune responses -- remain very poorly characterized.}}
 
 \para{Integrative approaches to understanding MZ B cell biology.}
-Mathematical models are a natural language for addressing knowledge gaps such as these, and have been successfully applied in many settings to dissect the dynamics that regulate lymphocyte populations~\cite{Thomas_Vaslin_1989, Rolink_1999, Antia_2005, Anderson_2009, Dowling_2009, Johnson_2012, Meyer-Hermann_2012,  Gossel_2017, van_Hoeven_2017, Reynaldi_2019,  Verheijen_2020, Asquith_2002, Westera_2013,  De_Boer_2013, DeBoer_2001, Hogan_2015, Rane_2018, Rane_2022, Mold_2019}.
+Mathematical models are a natural language for addressing knowledge gaps such as these, and have been successfully applied in many settings to dissect the dynamics that regulate lymphocyte populations~\cite{Thomas_Vaslin_1989, Rolink_1999, Asquith_2002, Antia_2005, Anderson_2009, Dowling_2009, Johnson_2012, Meyer-Hermann_2012,   Westera_2013,   Gossel_2017, van_Hoeven_2017, Reynaldi_2019,  Verheijen_2020, DeBoer_2001,   De_Boer_2013,  Hogan_2015, Rane_2018, Rane_2022, Mold_2019}.
 These approaches complement and enhance the information that can be gained from traditional experimental approaches.
 The overarching goal of the study proposed here is  \textbf{{to synthesize mathematical modeling with dedicated experiments to build a new,  comprehensive, and quantitative understanding of MZ B cell biology.}}
 
-\begin{wrapfigure}{r}{0.3\textwidth}
+\begin{wrapfigure}{r}{0.32\textwidth}
 \centering
 \vspace*{-5mm}
-%\includegraphics[width=0.32\textwidth]{Figures/bcell_matu2.jpg}
-\includegraphics[width=0.3\textwidth]{Figures/develop_diag.png}
-\vspace*{-7mm}
+\includegraphics[width=0.32\textwidth]{Figures/bcell_matu2.jpg}
+\vspace*{-8mm}
 \caption{\textbf{Developmental transitions within B cell subsets in the spleen.}} %\textbf{(A)} Linear pathway from T1 to FO or MZ. }
 \label{fig:MZ_dev}
 \vspace*{-5mm}
@@ -177,7 +176,7 @@ We postulate that B cells' potential to develop into an MZ fate is modulated con
 Understanding how the size and BCR diversity of the MZ B cell compartment change with age requires a detailed quantification of the rules governing loss, self-renewal, onward differentiation, and replenishment from precursors. 
 In particular, MZ B cell diversity is boosted by the influx of clones with new BCR specificities and is maintained by proliferative renewal of existing cells.
 Therefore, measuring the relative contributions of these processes is crucial for understanding how the MZ B cell repertoire evolves across a lifetime. 
-For example, is replacement of existing MZ B cells by new immigrants or by self-renewal purely stochastic, or is it hierarchical -- for example, do recent immigrants have a survival advantage (first-in, first-out)?
+For example, is replacement of existing MZ B cells by new immigrants or by self-renewal purely stochastic, or is it hierarchical -- for example, recent immigrants have a survival advantage (first-in, first-out)?
 Or does selection or adaptation drive the establishment of persistent MZ B cell populations that resist replacement by newer cells (first-in, last-out)?
 Further, experiments with conditional RAG2 deletion~\cite{Hao_2001} or IL-7 signaling blockade~\cite{Carvalho_2001} have demonstrated that MZ B cell numbers can be maintained life-long without replenishment from new immigrants from the BM.
 This observation implies that MZ B cell self-renewal and/or survival can be modulated to compensate for the reduced influx of new immigrants.
@@ -254,10 +253,10 @@ Since MZ B cells also derive from these precursors, we hypothesize that similar 
 This Aim will explore this hypothesis in depth.
 %naive T cells cell-age plus host-age. 
 
-\begin{wrapfigure}{r}{0.39\textwidth}
+\begin{wrapfigure}{r}{0.36\textwidth}
 \centering
-\vspace*{-6mm}
-\includegraphics[width=0.38\textwidth]{Figures/Ont_data4.pdf}
+\vspace*{-5mm}
+\includegraphics[width=0.35\textwidth]{Figures/Ont_data.pdf}
 \vspace*{-2mm}
 \caption{\textbf{Developmental dynamics of B cells in neonates.} 
 Note the logarithmic scale on the x-axis in panels A-D, to highlight early dynamics.
@@ -265,7 +264,7 @@ Note the logarithmic scale on the x-axis in panels A-D, to highlight early dynam
 \vspace*{-5mm}
 \label{fig:Ont_data}\end{wrapfigure}
 
-\para{\textit{Probing MZ B cell development with a Rag2-GFP Ki67-RFP dual reporter system: }}
+\para{\textit{Probing MZ B cell development with a Rag2-GFP Ki67-RFP dual reporter: }}
 The speed with which lymphocyte populations are established early in life may derive in part from proliferation within the lymphopenic environment~\cite{Min_2003}.
 With its intracellular lifetime of $\sim$4 days,  Ki67 is suited for measuring the typically slow rates of self-renewal at steady state in adults, but it is a relatively blunt instrument for resolving the more rapid proliferation (inter-division times < 4 days) seen in neonates. 
 To overcome this issue, we will use a cell fate reporter mouse model in which green fluorescent protein (GFP) is linked to the Rag2 promoter, which is switched on in B cell precursors in the bone marrow (BM).
@@ -273,11 +272,11 @@ Rag2 expression is down-regulated in B cells that exit the BM~\cite{Grawunder_19
 Further, cell divisions result in a 2-fold dilution of GFP in daughter cells. 
 In the first few weeks of life, peripheral B cell subsets are mostly composed of recent BM immigrants; therefore, GFP expression in part reflect the dynamics of their establishment and maintenance. 
 \textbf{The dynamics of GFP loss involve effects of cell age and/or cell division within the BM, transitional, and mature B cell stages, and thus are difficult to interpret intuitively.}
-Mathematical modeling can help resolve this complexity and so gives a new lens with which to distinguish mechanisms of B cell ontogeny and maintenance. 
+Mathematical modeling can resolve this complexity and so gives a new lens with which to distinguish mechanisms of B cell ontogeny and maintenance. 
 
 \textbf{Experimental strategy:} 
-We will measure total cell numbers,  \khi fractions, and GFP expression in B cell subsets in Rag2-GFP Ki67-RFP double reporter mice (> 40 mice distributed evenly over first 15 weeks starting from day 5 after birth, and > 20 mice evenly across the following 35 weeks). 
-In these mice, Ki67-RFP is a fusion transgene and therefore RFP expression directly reports the dynamics of Ki67 protein.
+We will measure total numbers,  \khi fractions, and GFP expression in B cell subsets in Rag2-GFP Ki67-RFP double reporter mice (> 40 mice distributed evenly over first 15 weeks starting from day 5 after birth, and > 20 mice evenly across the following 35 weeks). 
+In these mice, Ki67-RFP is a fusion transgene and therefore, RFP expression directly reports the dynamics of Ki67 protein.
 
 \para{{1.b Insights from preliminary data:}}
 Numbers of T1 B cells increase rapidly up to age 20 days (\textbf{Fig.~\ref{fig:Ont_data}A}), then decline sharply until age 50 days, and are maintained stably thereafter.
@@ -294,12 +293,12 @@ We outline the rules of operation of the mosaic model and the fitting procedure 
 
 \begin{wrapfigure}{r}{0.38\textwidth}
 \centering
-%\vspace*{1mm}t
+%\vspace*{1mm}
 \includegraphics[width=0.38\textwidth]{Figures/age_abm4.pdf}
 \vspace*{-7mm}
 \caption{
-\textbf{(A)}~Schematics of the mosaic model. %Structure of age-classes in a mouse of age $t$. A cell's age is defined as the time since its ancestor left the bone marrow (BM).
-\textbf{(B)}~Candidate pathways of B cell development.
+\textbf{(A)} Schematics of the mosaic model. %Structure of age-classes in a mouse of age $t$. A cell's age is defined as the time since its ancestor left the bone marrow (BM).
+\textbf{(B)} Candidate pathways of B cell development.
 }
 \vspace*{-5mm}
 \label{fig:age_ABM_sketch}
@@ -477,19 +476,19 @@ Identifying sources of noise in biological data is notoriously challenging.
 Typically, experimental data contain noise due to stochastic variation in biological processes and errors associated with experimental techniques.
 Probabilistic models can efficiently capture these but tend to be computationally expensive.
 It is generally belived that, when dealing with cell populations on the order of millions, stochastic effects are completely swamped by noise stemming from experimental error and inter-animal variation.
-In such regimes, when age-classes in the mosaic model contain over thousands of cells, we will %use their mean-field approximations and will 
+\blue{In such regimes, when age-classes in the mosaic model contain over thousands of cells, we will %use their mean-field approximations and will 
 define ODE systems to predict their mean behavior, following central limit theorem. 
 Essentially, we will divide each module in the age-class in four quadrants based on GFP and Ki67 status (+ve or -ve). % within each module in an age-class. 
 We will initialize the ODE systems with pre-defined number of age classes ($A_0,\ldots,A_N$).
 The ODE models will track movement of cells between the four quadrants and across the adjoining age-classes. %, at each time step~(\textbf{Fig.~\ref{fig:ode_approx}}).
-We will also track fluxes among the modules.
+We will also track fluxes among the modules.}
 Here, sum of all quadrants gives total numbers. % for the module $b_j$ in age-class $A_i$.
 The power of this approach is that ODE models can be solved relatively much more quickly and can be incorporated in pre-established fitting procedures in \textit{R} or \textit{Stan} programming languages.
 
 \textbf{\textit{Modeling continuous representations of cell-states:}}
 The probabilistic (mosaic model) and ODE modeling strategies described above %do not track continuous changes in GFP expression and therefore 
 are insensitive to state-transitions associated with incremental changes in GFP intensity. 
-To overcome this, we propose a PDE system that goes beyond binary (+ve versus -ve) cell-state representations and models simultaneously cell divisions and continuous changes in internal states.
+To overcome this, we propose a PDE system that goes beyond binary (+ve v/s -ve) cell-state representations and models simultaneously cell divisions and continuous changes in internal states.
 
 
 \textbf{\textit{Population structured PDE model:}}
@@ -521,15 +520,15 @@ Here, $g$ is the GFP expression normalized to maximum GFP intensity in MZ B cell
 %\end{equation*}
  % will be derived from the fits to the neonatal data.
 %To solve this PDE, we will track the division number `$n$' of individual cells. 
-The GFP expression within a cell that has divided $q$ number of times is $2^{-q}$. 
-Therefore, the density of cells with division number $q$ can be defined as $w_{q}(t, g) = u_{q}(t, 2^{-n} g)$, where $u_{q} \ge 0$. % for $0 \le g \le 1$.
+The GFP expression within a cell that has divided $n$ number of times is $2^{-n}$. 
+Therefore, the density of cells with division number $n$ can be defined as $w_{n}(t, g) = u_{n}(t, 2^{-n} g)$, where $u_{n} \ge 0$. % for $0 \le g \le 1$.
 PDE in eq.~\ref{eq:gfp-pde} is then reformulated as
 \begin{equation} 
 \small
-\frac{\partial w_{q}}{\partial t}  - \beta \,g \, \frac{\partial w_{q}}{\partial g} = 2\, \rho(t)  \, w_{q-1}(t, g) - \rho(t) \, w_{q}(t, g)  - \delta(t)  \, w_{q}(t, g), \quad \, \text{for } q = 0, 1, 2, ...
+\frac{\partial w_{n}}{\partial t}  - \beta \,g \, \frac{\partial w_{n}}{\partial g} = 2\, \rho(t)  \, w_{n-1}(t, g) - \rho(t) \, w_{n}(t, g)  - \delta(t)  \, w_{n}(t, g), \quad \, \text{for } n = 0, 1, 2, ...
 \label{eq:gfp-pde2}
 \end{equation}
-We will limit the value of $q$ based on the lower bound on GFP intensity observed in our experimental system, which transforms {eq.~\ref{eq:gfp-pde2}} into a finite system.
+We will limit the value of $n$ based on the lower bound on GFP intensity observed in our experimental system, which transforms {eq.~\ref{eq:gfp-pde2}} into a finite system.
 It can be then solved numerically to derive GFP density at time~$t$, which can be integrated from threshold GFP intensity ($\bar{g}$) to 1, to obtain the fraction of GFP$^{+}$ cells. 
 
 
@@ -537,8 +536,9 @@ It can be then solved numerically to derive GFP density at time~$t$, which can b
 Our models can be adapted to simulate MZ B cell development in settings where their niche is either partially or completely empty. % MZ B cell .
 We propose a system to validate these models and their predictions using mouse strains that carry B cell-specific Notch2$^{+/-}$ and Notch2$^{-/-}$ mutations, which contain a dose-dependent reduction in MZ B cell numbers~\cite{Witt_2003, Saito_2003}.
 Transplanting purified T1, T2 or FO B cells from Rag2-GFP Ki67-RFP (CD45.1) Notch2-sufficient donors in these Notch2 mutants (CD45.2 background) will allow us to compare their efficiency to differentiate into MZ B cells and to quantify the influence of population density on MZ B cell maintenance. 
+%We will compare the efficiency of development of MZ B cells from T2 and FO B cells and will explore the influence of population density on their precursor-influx and turnover.
 This out-of-sample prediction approach reconciles over-reliance of the model selection process on information criteria. % and allows us to compare developmental efficiency of MZ B cells from T2 and FO B cells.
-Further, it provides the means \textbf{to predict clinical outcomes in MZ B cell deficient conditions such as vaccine responses in infants and elderly, where MZ B cell numbers are substantially reduced.
+Further, it provides the means \textbf{to predict clinical outcomes in MZ B cell deficient conditions such as, vaccine responses in infants and elderly, where MZ B cell numbers are substantially reduced.
 }
 
 \subsection*{Aim 2: Quantify the steady-state dynamics of MZ B cells -- modeling the kinetics of their\\ renewal and replacement throughout life}
@@ -546,12 +546,12 @@ Further, it provides the means \textbf{to predict clinical outcomes in MZ B cell
 In this aim, we will probe the heterogeneity in  turnover and replacement dynamics of MZ B cells, by integrating the data from irradiation-free BM chimera mouse models into deterministic ODE systems.
 
 \para{{2.a Rationale and background:}}
-Identifying the precise nature of heterogeneity in lymphocyte population is notoriously difficult. For example, DNA labeling experiments equivocally support many models of compartmental diversity in multiple  T and B cell lineages~\cite{Asquith_2002, Westera_2013, De_Boer_2013, Bonhoeffer_2000, Ganusov_2010, Ganusov_2013, Schittler_2013}.
+Identifying the precise nature of heterogeneity in lymphocyte population is notoriously difficult. For example, DNA labeling experiments equivocally support many models of compartmental diversity in multiple  T and B cell lineages~\red{(CITEs)}.
 Conventionally, MZ B cells are considered to be an autonomously regulated homogeneous population of persistent, self-renewing cells. 
 However, accurate descriptions of the rules governing influx, replacement, division, death, and differentiation among MZ B cells are lacking and the degrees to which these processes regulate MZ B cell numbers and BCR diversity are poorly understood. 
 For example,  showing their long-term maintenance in the absence of influx from BM-derived precursors~\cite{Carvalho_2001, Hao_2001} provide a strong support for quorum sensing in MZ B cells.   
 There is also age-associated modulation in MZ B cell frequencies and BCR repertoire~\cite{Birjandi_2011, Cortegano_2017}.
-Lastly, multiple reports advocate for inherent variation in B cells' sensitivity to enter and/or persist within the MZ B cell compartment based on the strength and/or frequency of BCR~\cite{Cariappa_2001, Seo_2001, Samardzic_2002,  Pillai_2005, Martin_2000, Chen_1997} and Notch2~\cite{Tanigaki_2002, Saito_2003, Witt_2003, Hozumi_2004, Hammad_2017, Hampel_2011, Lechner_2021} mediated interactions. %signals they receive during their lifetime~(CITES).
+Lastly, multiple reports advocate for inherent variation in B cells' sensitivity to enter and/or persist within the MZ B cell compartment based on the strength and/or frequency of BCR and Notch2 mediated interactions~~\red{(CITEs)}. %signals they receive during their lifetime~(CITES).
 \textbf{We hypothesize that MZ B cells are dynamically regulated by an interplay of multiple processes and will explore the role of diverse cell-intrinsic and -extrinsic factors in governing their pool size and BCR clonal diversity.
 }
 
@@ -562,7 +562,7 @@ Lastly, multiple reports advocate for inherent variation in B cells' sensitivity
 \vspace*{-7mm}
 \caption{\textbf{MZ B cell dynamics in busulfan chimeras.}
 \textbf{(A)} Strategy to generate busulfan chimeras.
-\textbf{(B)} Flow-cytometry plots (at $\sim$5 weeks post transplant) showing strategy to identify donor and host cells in MZ (CD23$^-$, IgM$^\text{hi}$, CD21$^\text{hi}$) subset in B cells from recipient mice.% FSC is proxy for cell-size. t
+\textbf{(B)} Flow-cytometry plots (at $\sim$5 weeks post transplant) showing strategy to identify donor and host cells in MZ (CD23$^-$, IgM$^\text{hi}$, CD21$^\text{hi}$) subset in B (B220$^+$) cells in recipients.% FSC is proxy for cell-size. 
 }
 \label{fig:BUCHI}
 \vspace*{-6mm}
@@ -580,15 +580,15 @@ The power of this approach is that it allows us to study the unperturbed behavio
 %\textbf{Strategy:} 
 We will generate BM chimeras (> 60 recipients of ages between 8 -- 20 weeks) using an optimized dose of busulfan~(10~$\mu$g/g of body weight~\cite{Hogan_2019}) and will track the host and donor cells in the MZ B cell compartment~(\textbf{Fig.~\ref{fig:BUCHI}B}) and its precursors, over a 1-year window.
 
-\begin{wrapfigure}{l}{0.45\textwidth}
+\begin{wrapfigure}{l}{0.42\textwidth}
 \centering
-\vspace*{-3mm}
-\includegraphics[width=0.45\textwidth]{Figures/Ki_data.pdf}
-\vspace*{-7mm}
+\vspace*{-4mm}
+\includegraphics[width=0.42\textwidth]{Figures/Ki_data.pdf}
+\vspace*{-6mm}
 \caption{
-\textbf{(A)} Kinetics of total numbers and normalized donor fraction of MZ B cells.
-\textbf{(B)} Ki67 expression across B cell developmental stages. 
-\textbf{(C)} Proportions of \khi cells within host and donor subsets in chimeras.}
+\textbf{(A)} Kinetics of total numbers and \textbf{(B)} normalized donor fraction of MZ B cells.
+\textbf{(C)} Ki67 expression across B cell developmental stages. 
+\textbf{(D)} Proportions of \khi cells within host and donor subsets in chimeras.}
 \label{fig:BUCHI_data}
 \vspace*{-6mm}
 \end{wrapfigure}
@@ -599,7 +599,7 @@ The fraction of donor cells in all BM precursor and transitional B cell populati
 However, we saw that the donor fraction within MZ B cells stabilizes slowly relative to other mature lymphocyte populations (> 40 weeks; \textbf{Fig.~\ref{fig:BUCHI_data}A, right panel}).
 In particular, the host:donor composition of FO B cells equilibrates within approximately 20 weeks~\cite{Verheijen_2020}, suggesting that FO B cells are either developmental ancestors of MZ B cells, or diverge from the MZ B cell pathway at an earlier branch-point.
 
-We will also use concurrent measurements of Ki67 levels, which is expressed upon entry into the cell cycle and remains detectable for $\sim$4 days on lymphocytes~\cite{Gossel_2017, Verheijen_2020}, to determine the extent of cell-division in MZ B cells and their precursors.
+We will also use concurrent measurements of  a nuclear protein Ki67, which is expressed upon entry into the cell cycle and remains detectable for $\sim$4 days on lymphocytes~\cite{Gossel_2017, Verheijen_2020}, to determine the extent of cell-division in MZ B cells and their precursors.
 Analysis of Ki67 expression revealed a unimodal shift in its distribution through development of B cells in BM and spleen (Pre-B, transitional, and mature B cells; \textbf{Fig.~\ref{fig:BUCHI_data}B}), indicating a progressive decline in proliferative activity with developmental progression.
 We observed elevated levels of Ki67 in donor-derived cells relative to host cells soon after BMT, but they converged after $\sim$6 months~(\textbf{Fig.~\ref{fig:BUCHI_data}C}).
 This dynamic can derive from residual Ki67 expression on newly entered cells and/or from intrinsic differences in the ability to divide or die of young (donor) and relatively older (host) cells.
@@ -608,14 +608,14 @@ We will distinguish between these possibilities in our modeling framework.
 \para{\textit{Inter-individual scaling of the donor fraction:}}
 The levels at which host:donor ratios stabilize in each subset vary across mice, due to differences in the degree of depletion of host HSC by busulfan treatment. We accommodate this by normalizing the donor fraction in any given B cell subset to the donor fraction in their (putative) precursor. We refer to this as the normalized chimerism $f_\text{d}$ defined as,
 
-\begin{wrapfigure}{r}{0.25\textwidth}
+\begin{wrapfigure}{r}{0.22\textwidth}
 \centering
-\vspace*{-10mm}
-\includegraphics[width=0.25\textwidth]{Figures/Nfd_expl.png}
-\vspace*{-7mm}
+\vspace*{-9mm}
+\includegraphics[width=0.22\textwidth]{Figures/Nfd_expl.png}
+\vspace*{-8mm}
 \caption{{The $f_\text{d}$ kinetic  reflects net-loss rates, and heterogeneity in cell dynamics.}}% and clonal diversity.}}
 \label{fig:Repop}
-\vspace*{-3mm}
+\vspace*{-2mm}
 \end{wrapfigure}
 ~
 \begin{equation}
@@ -623,9 +623,9 @@ The levels at which host:donor ratios stabilize in each subset vary across mice,
 f_\text{d} = \frac{\text{Donor cell numbers}}{\text{Total cell numbers} \times \chi}, \;\; \text{where } \chi  =\text{Source chimerism}
 \label{eq:Nfd}
 \end{equation}
-This quantity is essentially a measure of turnover; it  represents the degree to which replacement of cells in a given subset mirrors the replacement within its source population.
-%This normalization allows us to fit a single model to data from multiple mice, who respond differently to busulfan treatment.
-This normalization allows us to fit a single model to data from multiple mice, who may have responded differently to busulfan treatment.
+$f_\text{d}$ represents the degree to which replacement of cells in a given subset mirrors the replacement within its source population.
+This normalization allows us to fit a single model to data from multiple mice, who respond differently to busulfan treatment.
+
 
 \para{\textit{Identifying population structures within MZ B cells:}}
 The kinetics of infiltration of donor cells can reveal the kinetic substructure of lymphocyte populations.
@@ -666,11 +666,11 @@ We assume that equations in (\ref{eq:neutral_ki}) hold identically for donor and
 \end{equation}
 }%
 The net-loss rate ($\lambda$) is the balance between true loss and cell division ($\lambda = \delta - \rho$) and $\chi$ is the chimerism in the precursor.
-The normalized donor fraction within the MZ B cells then can be derived using~eqs.~\ref{eq:Nfd} and \ref{eq:neutral_chi},
+The normalized donor fraction within the MZ B cells then can be derived using~(eqs.~\ref{eq:Nfd} and \ref{eq:neutral_chi}),
 {\small
 \begin{align} 
 \dot f_\text{d}(t) = \frac{d}{dt} \bigg(\frac{M_{d}(t)}{\chi \, M(t)} & \bigg)  = \frac{\phi \, P(t)}{M(t)} \, \big(1-f_\text{d}(t)\big); \quad \text{for }\chi, M(t) > 0. \label{eq:nfd_derive1} \\  
-\text{At steady-state, } \dot M(t) = 0, \; & \text{ so we get }  \frac{\phi \, P(t)}{M(t)} = \lambda,  \; \text{ so that }  \dot f_\text{d}(t) = \lambda \, \big(1 - f_\text{d}(t)\big). 
+\text{At steady-state, } \dot M(t) = 0, \; & \text{ we get }  \frac{\phi \, P(t)}{M(t)} = \lambda,  \; \text{ so that }  \dot f_\text{d}(t) = \lambda \, \big(1 - f_\text{d}(t)\big). 
 \label{eq:nfd_derive2}
 \end{align}
 }%
@@ -709,7 +709,7 @@ We will explore two variants of this `kinetic heterogeneity' model~(\textbf{Fig.
 In both of these models, an initial rapid increase in donor chimerism, due to replacement of cells with faster turnover, is followed by a more gradual approach to stable chimerism as the slower subpopulation is replaced.
 Similarly, a decline in donor {\khi} proportions to the lower level observed in host cells~(\textbf{Fig.~\ref{fig:BUCHI}D}) can be explained by the equilibration of the fast/slow composition of the donor compartment over time.
 %Additionally, declining enrichment of rapidly dividing `fast' cells in the donor compartment over time following the BMT  may explain the distinct dynamics of \khi proportions observed in donor and host subsets~(Fig.~\ref{fig:ki67_div}B).
-We will define fast and slow subsets within both donor and host compartments as in eq.~\ref{eq:neutral_ki}, which then can be combined to derive the proportion of \khi expressing cells in donor and host populations.
+We will assume identical dynamics of fast and slow cells within the donor and host subsets and define them as in eq.~\ref{eq:neutral_ki}, which then can be combined to derive the proportion of \khi expressing cells in donor and host populations.
 The kinetics of the pool size and normalized donor fraction will be determined as in the neutral model, using eqs.~(\ref{eq:neutral_chi}-\ref{eq:nfd_derive2}).
 
 
@@ -750,7 +750,7 @@ Model predictions (lines with 95\% credible intervals as envelopes) shown here w
 
 \para{\textit{Model validation and selection:}}
 Model definitions, the prior distribution of parameters and the likelihood functions will be encoded in the \textit{Stan} language.
-We will use Hamiltonian Monte Carlo algorithm in \textit{Stan} to estimate the model parameters and the errors associated with the empirical measurements~\cite{Stan_cite}.
+We will use Hamiltonian Monte Carlo algorithm in \textit{Stan} to estimate the model parameters and the errors associated with the empirical measurements.
 The models will be ranked and selected using the LOO cross validation method, as described in section 1d. %~\ref{sec:stats-validation}.
 
 
@@ -778,13 +778,11 @@ We will generate >~40 BM chimeras by transplanting these cultured HSC (CD45.1) i
 This system resembles the busulfan chimera approach, since here too we will use donor BM-derived HSC to reconstitute {unperturbed peripheral lymphocyte compartments} of the recipient mice.
 Analyzing kinetics of invasion of donor-derived cells in peripheral B cell compartments in these chimeras thus provides an {independent validation} of the models of MZ B cell dynamics that we outlined above.
 
-\para{\textit{Chimeras from donor mice with transgenic BCRs:}}
+\para{\textit{BCR transgenic donor chimeras:}}
 %The c-Kit system can potentially be used to study the effect of BCR signaling on MZ B cell development and maintenance.
-We will use the c-Kit$^+$ system to make chimeras from donor mice carrying the VH81x heavy chain.
-VH81x pairs with endogenous light chains to generate a limited BCR repertoire, capable of recognizing self-antigens, and has been shown to bias development of B cells exclusively towards the MZ B cell fate~\cite{Martin_2000, Hammad_2017}.
-%B cells with VH81x transgene can recognize self-antigens and show a bias to develop into MZ B cells~\cite{Martin_2000, Hammad_2017}.
-We will compare the kinetics of donor fraction in chimeras generated using VH81x and wild-type donors.
-This comparison will allow us to study the effect of BCR signaling on MZ B cell development and maintenance and will provide a method of external validation for the models that assume heterogeneity in MZ B cells, {\ie} the birth-death privilege and kinetic heterogeneity models. % versus models with heterogenous population structure
+We will use c-Kit$^+$ system to make chimeras from donor mice carrying VH81x heavy chain.
+VH81x pairs with endogenous light chains to generate a limited BCR repertoire, capable of recognizing self-antigens, and has been shown to bias development of B cells exclusively towards the MZ fate~\cite{Martin_2000, Hammad_2017}.
+We will compare the kinetics of donor fraction in chimeras generated using VH81x and will-type donors to study the effect of BCR signaling on MZ B cell development and maintenance; and to validate the models that assume heterogeneity in MZ B cells, {\ie} the birth-death privilege and kinetic heterogeneity model. % versus models with heterogenous population structure
 If necessary, we will use transgenic donors carrying MD2 heavy chain that drives development away from the MZ fate~\cite{Martin_2000}.
 
 %also expand c-Kit system to generate chimeras from RAG/Ki67 dual reporter donors and will employ the mosaic model to distinguish development
@@ -802,7 +800,7 @@ Conceptually, the kinetic heterogeneity model accommodates a possibility in whic
 The true causal structure of MZ B cell homeostasis may lie at the intersection of two or more mechanisms discussed above.
 Additionally, mechanistic models may introduce directional prejudice -- consistently too high or too low predictions. 
 %An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions and in out-of-sample variance, is to averaging predictions from multiple likely models~\cite{Wintle:2003, Dormann:2018}.
-An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions, is to average predictions from multiple likely models. 
+An effective strategy to report uncertainty in model structure and to minimize the systematic bias in model definitions, is to averaging predictions from multiple likely models. 
 This strategy may also reduce the expected variance in predicting out-of-sample data~\cite{Wintle:2003, Dormann:2018}, and is used routinely to generate reliable predictions  in weather forecasting and in ecological modeling.
 Here, we will report the weighted average ($\widetilde{Y}$) of the predictions from the models that received strong support from the data (weights estimated as in eq.~\ref{eq:elpd-loo}),
 \vspace{-1mm}
@@ -813,7 +811,7 @@ Here, we will report the weighted average ($\widetilde{Y}$) of the predictions f
 \label{eq:model-averaging}
 \vspace{-2mm}
 \end{equation}
-%The variance of the averaged predictions depends on the co-variances between models $m$ and $m'$~(ref.~\citenum{Dormann:2018}).
+The variance of the averaged predictions depends on the co-variances between models $m$ and $m'$~(ref.~\citenum{Dormann:2018}).
 
 
 
@@ -837,7 +835,7 @@ Here, we will quantify the efficiency and the kinetic of differentiation pathway
 \para{{3.b Insights from preliminary data -- interplay of BCR and Notch2 signals during B cell responses:}}
 We recently discovered that B cell-specific constitutive activation of Notch2 signaling diverts differentiation of antigen-activated B cells away from GC and towards an MZ B cell fate~\cite{Babushku:2022}.
 Additionally, we report $\sim$100-fold up-regulation of Notch2 expression upon \textit{in vitro} stimulation of purified FO B cells using BCR and CD40 agonists (for 12-14h)  and~\cite{Babushku:2022} and elevated numbers of MZ B cells in mice carrying B cell-specific constitutively active CD40 signaling~\cite{Homig_Holzel_2008}.
-These findings suggest that {BCR and CD40 derived signals act upstream of Notch2} and may enhance the ability of B cells to differentiate into MZ B cells by increasing the surface expression of Notch2.
+These findings suggest that {BCR and CD40 derived signals act upstream of the Notch2} and may enhance the ability of B cells to differentiate into MZ B cells by increasing the surface expression of Notch2.
 
 \para{\textit{Mouse models for fate-mapping of B cells responding to an antigen.}}
 To specifically track differentiation pathways of activated B cells during TD responses, we crossed C$\gamma1$-Cre mice, in which B cells express Cre recombinase upon IgG1 induction, with (1) CAR$^\text{STOPfl}$ and (2) Notch2$^\text{fl/fl}$CAR$^\text{STOPfl}$ reporter strains. 
@@ -888,7 +886,7 @@ To describe pathways of generation of CAR$^+$ MZ B cells in these mice, we defin
 In both of these models, we included contribution from direct activation of MZ B cells to the CAR$^+$ MZ B cell pool. %, defined by a \textit{per capita} rate of flux $\beta$.
 Lastly, we define a `null model', in which CAR$^+$ MZ B cells are derived purely by the activation of CAR$^-$ MZ B cells~(\textbf{Fig.~\ref{fig:response_model}A}). % with no influx from FO and GC B cells.
 We assume that in N2KO/CAR mice, differentiation of either FO or GC B cells into MZ B cells is absent, but GC B cell dynamics are similar to control/CAR mice. % \ie~Notch2 signals do not influence recruitment into or loss of B cells from GC. 
-We performed a series of immunization experiments using these reporter mice (n > 80) and measured the CAR$^+$ fraction and total numbers of FO, GC and MZ B cells at 8 timepoints up to a month.
+We performed a series of immunization experiments using these reporter mice (n > 80) and measured the CAR fraction and total numbers of FO, GC and MZ B cells at 8 timepoints up to a month.
 CAR$^+$ MZ B cells appear as early as day 4 post NP-CGG challenge, and their numbers continue to increase upto a month post immunization.
 To describe this kinetic, we will explore following substructures in branched, linear and null models. %  during the TD response.
 
